@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Recycle, ShieldCheck, HardDrives, Leaf, Users, Truck } from "lucide-react";
+import { CheckCircle, Recycle, ShieldCheck, HardDrive, Leaf, Users, Truck } from "lucide-react";
 
 const servicesData = {
   "e-waste-recycling": {
@@ -34,7 +34,7 @@ const servicesData = {
   },
   "plastic-waste-management": {
     title: "Plastic Waste Management",
-    icon: <HardDrives className="h-12 w-12 text-primary" />,
+    icon: <HardDrive className="h-12 w-12 text-primary" />,
     description: "We offer end-to-end plastic waste management solutions, helping businesses achieve their sustainability goals. From collection to processing, we transform plastic waste into valuable raw materials for new products.",
     image: "https://placehold.co/1200x600.png",
     hint: "plastic bottles recycling",
