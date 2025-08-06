@@ -8,9 +8,9 @@ export function Footer() {
     <footer className="bg-secondary/50">
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center">
             <Link href="/">
-                <Image src="/logo1.png" alt="EcoHub Logo" width={256} height={64} className="h-24 w-auto" />
+                <Image src="/logo1.png" alt="EcoHub Logo" width={256} height={64} className="h-32 w-auto" />
             </Link>
           </div>
           <p className="text-center text-sm text-muted-foreground">
