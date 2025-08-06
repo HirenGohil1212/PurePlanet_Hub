@@ -61,45 +61,6 @@ const services = [
     }
   ];
 
-  const exploreLinks = [
-    {
-      icon: <Users className="h-10 w-10 text-primary" />,
-      title: "About Us",
-      description: "Learn about our mission, vision, and the passionate team driving sustainability forward.",
-      href: "/about"
-    },
-    {
-      icon: <Newspaper className="h-10 w-10 text-primary" />,
-      title: "Blog",
-      description: "Read our latest articles and insights on e-waste, recycling, and environmental protection.",
-      href: "/blog"
-    },
-    {
-      icon: <Handshake className="h-10 w-10 text-primary" />,
-      title: "Partners",
-      description: "Meet the organizations we collaborate with to create a greater impact.",
-      href: "/partners"
-    },
-    {
-      icon: <Briefcase className="h-10 w-10 text-primary" />,
-      title: "Careers",
-      description: "Explore opportunities to join our team and build a rewarding career in sustainability.",
-      href: "/careers"
-    },
-    {
-      icon: <Building className="h-10 w-10 text-primary" />,
-      title: "Infrastructure",
-      description: "Discover our state-of-the-art facilities that make our recycling processes efficient and safe.",
-      href: "/infrastructure"
-    },
-     {
-      icon: <Recycle className="h-10 w-10 text-primary" />,
-      title: "EPR Services",
-      description: "Comprehensive Extended Producer Responsibility services to manage your product's lifecycle.",
-      href: "/services/e-waste-recycling"
-    },
-]
-
 export default function Home() {
     const plugin = React.useRef(
         Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -186,47 +147,148 @@ export default function Home() {
       </section>
       
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Explore EcoHub</h2>
-                    <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Discover the different facets of our organization and how we're making a positive impact on the environment.
-                    </p>
-                </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-stretch gap-8 py-12 sm:grid-cols-2 md:grid-cols-3">
-                {exploreLinks.map((link, index) => (
-                    <Card key={index} className="flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                        <CardHeader className="flex flex-col items-center text-center">
-                            {link.icon}
-                            <CardTitle className="mt-4 font-headline">{link.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="text-center flex-grow">
-                            <p className="text-muted-foreground">{link.description}</p>
-                        </CardContent>
-                        <CardFooter className="justify-center">
-                            <Button variant="outline" asChild>
-                                <Link href={link.href}>Explore</Link>
-                            </Button>
-                        </CardFooter>
-                    </Card>
-                ))}
-            </div>
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
+          <div className="space-y-4">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About EcoHub</h2>
+            <p className="text-muted-foreground md:text-xl/relaxed">
+              Discover our mission to pioneer sustainable solutions for a cleaner planet. We are a team of passionate individuals committed to responsible e-waste management and environmental stewardship through innovative recycling programs.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/about">Meet the Team</Link>
+            </Button>
+          </div>
+          <Image
+              src="https://placehold.co/600x400.png"
+              width="600"
+              height="400"
+              alt="About EcoHub"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
+              data-ai-hint="sustainable technology"
+            />
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+      <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
+            <Image
+              src="https://placehold.co/600x400.png"
+              width="600"
+              height="400"
+              alt="EPR Services"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover order-last lg:order-first"
+              data-ai-hint="recycling process"
+            />
+          <div className="space-y-4 lg:text-right">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Comprehensive EPR Services</h2>
+            <p className="text-muted-foreground md:text-xl/relaxed">
+             From e-waste recycling and secure data destruction to plastic waste management, we offer a full suite of Extended Producer Responsibility (EPR) services to meet your compliance needs and sustainability goals.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/services/e-waste-recycling">Explore Our Services</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-4">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">EcoHub Insights</h2>
+            <p className="text-muted-foreground md:text-xl/relaxed">
+             Stay informed with our latest articles, news, and insights. Our blog covers everything from the dangers of e-waste to tips for organizing community recycling drives and understanding corporate compliance.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/blog">Read Our Blog</Link>
+            </Button>
+          </div>
+          <Image
+              src="https://placehold.co/600x400.png"
+              width="600"
+              height="400"
+              alt="Blog"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
+              data-ai-hint="person reading article"
+            />
+        </div>
+      </section>
+
+       <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
+             <Image
+              src="https://placehold.co/600x400.png"
+              width="600"
+              height="400"
+              alt="Infrastructure"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover order-last lg:order-first"
+              data-ai-hint="modern factory"
+            />
+          <div className="space-y-4 lg:text-right">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Advanced Infrastructure</h2>
+            <p className="text-muted-foreground md:text-xl/relaxed">
+              We invest in the latest technology and state-of-the-art facilities. Explore our automated sorting centers, secure data destruction labs, and specialized plastics recycling plants that power our operations.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/infrastructure">See Our Facilities</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
+          <div className="space-y-4">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Valued Partners</h2>
+            <p className="text-muted-foreground md:text-xl/relaxed">
+              Collaboration is key to our success. We are proud to partner with leading technology corporations, non-profits, and city governments to amplify our impact and drive the circular economy forward.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/partners">Meet Our Partners</Link>
+            </Button>
+          </div>
+          <Image
+              src="https://placehold.co/600x400.png"
+              width="600"
+              height="400"
+              alt="Partners"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
+              data-ai-hint="business handshake"
+            />
+        </div>
+      </section>
+
+      <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
+             <Image
+              src="https://placehold.co/600x400.png"
+              width="600"
+              height="400"
+              alt="Careers"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover order-last lg:order-first"
+              data-ai-hint="diverse team working"
+            />
+          <div className="space-y-4 lg:text-right">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Join Our Mission</h2>
+            <p className="text-muted-foreground md:text-xl/relaxed">
+              Are you passionate about sustainability and technology? Explore rewarding career opportunities at EcoHub and help us build a greener future. We're looking for innovative individuals to join our growing team.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/careers">Explore Careers</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
+        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="space-y-3">
             <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
               Ready to Make a Difference?
             </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Partner with us to manage your e-waste responsibly. Let's work together for a cleaner, greener planet.
             </p>
           </div>
-          <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
+          <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Button asChild size="lg">
                 <Link href="/about">About Us</Link>
             </Button>
