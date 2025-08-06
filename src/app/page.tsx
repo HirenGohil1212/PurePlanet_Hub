@@ -64,48 +64,45 @@ const services = [
 export default function Home() {
   return (
     <div className="fade-in">
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+      <section className="w-full">
+        <div className="relative">
           <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {carouselItems.map((item, index) => (
                 <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card className="overflow-hidden">
-                        <div className="grid grid-cols-1 md:grid-cols-2">
-                            <div className="flex flex-col justify-center p-8 md:p-12">
-                                <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                                    {item.title}
-                                </h1>
-                                <p className="mt-4 max-w-[600px] text-muted-foreground md:text-xl">
-                                    {item.description}
-                                </p>
-                                <div className="mt-6">
-                                    <Button asChild size="lg">
-                                        <Link href={item.href}>
-                                            {item.buttonText}
-                                            <ArrowRight className="ml-2 h-5 w-5" />
-                                        </Link>
-                                    </Button>
-                                </div>
-                            </div>
-                            <div className="relative h-64 md:h-auto">
-                                <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    data-ai-hint={item.hint}
-                                />
-                            </div>
+                  <div className="relative h-[600px] w-full">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="brightness-50"
+                      data-ai-hint={item.hint}
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+                      <div className="bg-black/30 p-8 rounded-lg">
+                        <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                          {item.title}
+                        </h1>
+                        <p className="mt-4 max-w-[600px] text-lg md:text-xl">
+                          {item.description}
+                        </p>
+                        <div className="mt-6">
+                          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Link href={item.href}>
+                              {item.buttonText}
+                              <ArrowRight className="ml-2 h-5 w-5" />
+                            </Link>
+                          </Button>
                         </div>
-                    </Card>
+                      </div>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+            <CarouselPrevious className="absolute left-8 top-1/2 -translate-y-1/2 z-10 h-12 w-12 text-white" />
+            <CarouselNext className="absolute right-8 top-1/2 -translate-y-1/2 z-10 h-12 w-12 text-white" />
           </Carousel>
         </div>
       </section>
