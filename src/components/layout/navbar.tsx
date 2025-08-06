@@ -119,19 +119,21 @@ export function Navbar() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs">
-                <SheetHeader className="sr-only">
-                  <SheetTitle>Menu</SheetTitle>
+            <SheetContent side="right" className="w-full max-w-xs p-0">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Menu</SheetTitle>
                 </SheetHeader>
-              <div className="p-4">
-              <Link href="/" className="mb-8 flex items-center h-full" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
-              </Link>
-              <div className="flex flex-col space-y-4">
+              <div className="flex h-full flex-col">
+              <div className="p-4 border-b">
+                <Link href="/" className="flex items-center h-16" onClick={() => setMobileMenuOpen(false)}>
+                  <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
+                </Link>
+              </div>
+              <div className="flex flex-col space-y-2 p-4">
               {navLinks.map((link) =>
                 link.subLinks ? (
                   <div key={link.label}>
-                    <h4 className="mb-2 font-semibold text-muted-foreground">{link.label}</h4>
+                    <h4 className="mb-2 text-lg font-semibold text-muted-foreground">{link.label}</h4>
                     <div className="flex flex-col space-y-2 pl-4">
                       {link.subLinks.map((subLink) => (
                         <MobileNavLink key={subLink.label} href={subLink.href}>
