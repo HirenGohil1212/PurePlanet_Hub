@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
             <Link href="/">
-                <Image src="/logo1.png" alt="EcoHub Logo" width={128} height={32} className="h-8 w-auto" />
+                <Image src="/logo1.png" alt="EcoHub Logo" width={256} height={64} className="h-16 w-auto" />
             </Link>
           </div>
           <p className="text-center text-sm text-muted-foreground">
