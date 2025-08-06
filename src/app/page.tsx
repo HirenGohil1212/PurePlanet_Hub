@@ -121,7 +121,7 @@ export default function Home() {
                     <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Commitment</div>
                     <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Your Partner in Sustainability</h2>
                     <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        At EcoHub, we are dedicated to providing comprehensive and responsible solutions for e-waste and plastic management. We believe in creating a circular economy where waste is transformed into valuable resources.
+                        At Pure Planet Recycling, we are dedicated to providing comprehensive and responsible solutions for e-waste and plastic management. We believe in creating a circular economy where waste is transformed into valuable resources.
                     </p>
                 </div>
             </div>
@@ -149,7 +149,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-4">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About EcoHub</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Pure Planet Recycling</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
               Discover our mission to pioneer sustainable solutions for a cleaner planet. We are a team of passionate individuals committed to responsible e-waste management and environmental stewardship through innovative recycling programs.
             </p>
@@ -161,7 +161,7 @@ export default function Home() {
               src="https://placehold.co/600x400.png"
               width="600"
               height="400"
-              alt="About EcoHub"
+              alt="About Pure Planet Recycling"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
               data-ai-hint="sustainable technology"
             />
@@ -193,7 +193,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-4">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">EcoHub Insights</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pure Planet Recycling Insights</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
              Stay informed with our latest articles, news, and insights. Our blog covers everything from the dangers of e-waste to tips for organizing community recycling drives and understanding corporate compliance.
             </p>
@@ -269,7 +269,7 @@ export default function Home() {
           <div className="space-y-4 lg:text-right">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Join Our Mission</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
-              Are you passionate about sustainability and technology? Explore rewarding career opportunities at EcoHub and help us build a greener future. We're looking for innovative individuals to join our growing team.
+              Are you passionate about sustainability and technology? Explore rewarding career opportunities at Pure Planet Recycling and help us build a greener future. We're looking for innovative individuals to join our growing team.
             </p>
             <Button asChild size="lg">
                 <Link href="/careers">Explore Careers</Link>
@@ -296,7 +296,7 @@ export default function Home() {
                 </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
-                <Link href="mailto:contact@ecohub.com">
+                <Link href="mailto:contact@pureplanetrecycling.com">
                     <Mail className="mr-2 h-5 w-5" />
                     Email Us
                 </Link>

@@ -19,7 +19,7 @@ export default function AboutPage() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
-                  About EcoHub
+                  About Pure Planet Recycling
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Pioneering sustainable solutions for a cleaner planet. We are committed to responsible e-waste management and environmental stewardship.

@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EcoHub - E-Waste Management",
+  title: "Pure Planet Recycling - E-Waste Management",
   description: "Leading the charge in responsible e-waste and plastic management for a sustainable future.",
 };
 

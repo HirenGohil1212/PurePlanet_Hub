@@ -63,7 +63,7 @@ export default function BlogPage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
-              EcoHub Insights
+              Pure Planet Recycling Insights
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
               Stay updated with the latest news, articles, and insights on e-waste management and sustainability.

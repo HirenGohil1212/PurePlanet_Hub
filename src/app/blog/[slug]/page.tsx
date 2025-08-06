@@ -15,7 +15,7 @@ const blogPostsData = {
         content: [
             "Electronic waste, or e-waste, is the fastest-growing stream of waste globally. When discarded in landfills, electronics containing toxic substances like lead, mercury, and cadmium can leach into the soil and water, posing significant risks to both environmental and human health.",
             "These toxins can contaminate groundwater, poisoning local ecosystems and entering the human food chain. Air quality is also affected when e-waste is informally burned to extract valuable metals, releasing harmful dioxins.",
-            "Proper recycling by certified professionals like EcoHub is essential. We ensure that hazardous materials are disposed of safely and valuable resources are recovered, minimizing the environmental footprint of your old electronics."
+            "Proper recycling by certified professionals like Pure Planet Recycling is essential. We ensure that hazardous materials are disposed of safely and valuable resources are recovered, minimizing the environmental footprint of your old electronics."
         ]
     },
     "how-data-destruction-protects-business": {
@@ -27,7 +27,7 @@ const blogPostsData = {
         content: [
             "In today's digital age, data is one of your most valuable assets. Improper disposal of old hard drives, computers, and servers can lead to devastating data breaches, damaging your company's reputation and resulting in hefty fines.",
             "Simply deleting files is not enough. Data can often be recovered from discarded devices. Professional data destruction services use methods like physical shredding, degaussing, and certified software-based erasure to ensure that information is permanently irrecoverable.",
-            "At EcoHub, we provide a full chain of custody and a certificate of destruction, giving you the peace of mind that your confidential information is secure and your business is compliant with privacy regulations like GDPR and HIPAA."
+            "At Pure Planet Recycling, we provide a full chain of custody and a certificate of destruction, giving you the peace of mind that your confidential information is secure and your business is compliant with privacy regulations like GDPR and HIPAA."
         ]
     },
     "guide-to-corporate-ewaste-compliance": {
@@ -39,7 +39,7 @@ const blogPostsData = {
         content: [
             "Navigating the complex web of e-waste regulations is a major challenge for corporations. Laws like the Extended Producer Responsibility (EPR) mandate that manufacturers and importers take responsibility for the entire lifecycle of their products.",
             "Failure to comply can lead to legal penalties and reputational damage. Key steps to compliance include conducting regular e-waste audits, partnering with a certified recycling vendor, maintaining meticulous records, and staying informed about changing legislation.",
-            "EcoHub's compliance management services help businesses navigate these regulations, ensuring you meet all your legal obligations while contributing to a more sustainable planet."
+            "Pure Planet Recycling's compliance management services help businesses navigate these regulations, ensuring you meet all your legal obligations while contributing to a more sustainable planet."
         ]
     },
     "journey-of-recycled-plastic": {
@@ -61,7 +61,7 @@ const blogPostsData = {
         hint: "community event",
         tags: ["Community", "E-Waste", "Events"],
         content: [
-            "A community e-waste drive is a fantastic way to promote sustainability and help your neighbors dispose of their old electronics responsibly. To get started, partner with a certified e-waste recycler like EcoHub, who can handle the logistics and ensure proper processing.",
+            "A community e-waste drive is a fantastic way to promote sustainability and help your neighbors dispose of their old electronics responsibly. To get started, partner with a certified e-waste recycler like Pure Planet Recycling, who can handle the logistics and ensure proper processing.",
             "Choose a convenient date and location with ample space, like a school or community center parking lot. Promote your event well in advance through local newspapers, social media, and community bulletin boards. Be clear about what items you can and cannot accept.",
             "On the day of the event, have a team of volunteers to help direct traffic and unload items. It's a rewarding experience that makes a tangible positive impact on your local environment."
         ]

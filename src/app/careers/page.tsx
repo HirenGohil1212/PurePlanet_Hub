@@ -65,7 +65,7 @@ export default function CareersPage() {
                   Join Our Mission
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Build a rewarding career at EcoHub and help us create a more sustainable world. We're looking for passionate, innovative individuals to join our team.
+                  Build a rewarding career at Pure Planet Recycling and help us create a more sustainable world. We're looking for passionate, innovative individuals to join our team.
                 </p>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function CareersPage() {
               src="https://placehold.co/600x400.png"
               width="600"
               height="400"
-              alt="EcoHub Team"
+              alt="Pure Planet Recycling Team"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
               data-ai-hint="diverse team meeting"
             />
@@ -84,7 +84,7 @@ export default function CareersPage() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Why Work at EcoHub?</h2>
+                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Why Work at Pure Planet Recycling?</h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-lg">
                     We're more than just a company; we're a community dedicated to making a positive impact.
                 </p>
