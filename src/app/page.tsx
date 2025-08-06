@@ -11,7 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Recycle, ShieldCheck, HardDrive, Leaf } from "lucide-react";
+import { ArrowRight, Recycle, ShieldCheck, HardDrive, Leaf, Users, Truck, Building, Newspaper, Handshake, Briefcase } from "lucide-react";
 
 const carouselItems = [
   {
@@ -60,6 +60,45 @@ const services = [
       href: "/services/plastic-waste-management"
     }
   ];
+
+  const exploreLinks = [
+    {
+      icon: <Users className="h-10 w-10 text-primary" />,
+      title: "About Us",
+      description: "Learn about our mission, vision, and the passionate team driving sustainability forward.",
+      href: "/about"
+    },
+    {
+      icon: <Newspaper className="h-10 w-10 text-primary" />,
+      title: "Blog",
+      description: "Read our latest articles and insights on e-waste, recycling, and environmental protection.",
+      href: "/blog"
+    },
+    {
+      icon: <Handshake className="h-10 w-10 text-primary" />,
+      title: "Partners",
+      description: "Meet the organizations we collaborate with to create a greater impact.",
+      href: "/partners"
+    },
+    {
+      icon: <Briefcase className="h-10 w-10 text-primary" />,
+      title: "Careers",
+      description: "Explore opportunities to join our team and build a rewarding career in sustainability.",
+      href: "/careers"
+    },
+    {
+      icon: <Building className="h-10 w-10 text-primary" />,
+      title: "Infrastructure",
+      description: "Discover our state-of-the-art facilities that make our recycling processes efficient and safe.",
+      href: "/infrastructure"
+    },
+     {
+      icon: <Recycle className="h-10 w-10 text-primary" />,
+      title: "EPR Services",
+      description: "Comprehensive Extended Producer Responsibility services to manage your product's lifecycle.",
+      href: "/services/e-waste-recycling"
+    },
+]
 
 export default function Home() {
     const plugin = React.useRef(
@@ -145,8 +184,39 @@ export default function Home() {
             </div>
         </div>
       </section>
-
+      
       <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="space-y-2">
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Explore EcoHub</h2>
+                    <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                        Discover the different facets of our organization and how we're making a positive impact on the environment.
+                    </p>
+                </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-stretch gap-8 py-12 sm:grid-cols-2 md:grid-cols-3">
+                {exploreLinks.map((link, index) => (
+                    <Card key={index} className="flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                        <CardHeader className="flex flex-col items-center text-center">
+                            {link.icon}
+                            <CardTitle className="mt-4 font-headline">{link.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-center flex-grow">
+                            <p className="text-muted-foreground">{link.description}</p>
+                        </CardContent>
+                        <CardFooter className="justify-center">
+                            <Button variant="outline" asChild>
+                                <Link href={link.href}>Explore</Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                ))}
+            </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
           <div className="space-y-4">
             <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
