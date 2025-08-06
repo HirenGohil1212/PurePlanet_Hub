@@ -3,7 +3,8 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Leaf, Menu, Recycle } from "lucide-react";
+import { Menu } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -77,7 +78,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <Leaf className="h-6 w-6 text-primary" />
+          <Image src="/logo1.png" alt="EcoHub Logo" width={32} height={32} className="h-8 w-8" />
           <span className="font-headline text-xl font-bold text-primary">
             EcoHub
           </span>
@@ -124,7 +125,7 @@ export function Navbar() {
             <SheetContent side="right" className="w-full max-w-xs">
               <div className="p-4">
               <Link href="/" className="mb-8 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <Leaf className="h-6 w-6 text-primary" />
+                <Image src="/logo1.png" alt="EcoHub Logo" width={32} height={32} className="h-8 w-8" />
                 <span className="font-headline text-xl font-bold text-primary">EcoHub</span>
               </Link>
               <div className="flex flex-col space-y-4">
