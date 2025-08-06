@@ -1,6 +1,7 @@
-import { Leaf, Twitter, Linkedin, Gitlab } from "lucide-react";
+import { Twitter, Linkedin, Gitlab } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,8 +9,9 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
-            <Leaf className="h-6 w-6 text-primary" />
-            <span className="text-lg font-bold text-primary">EcoHub</span>
+            <Link href="/">
+                <Image src="/logo1.png" alt="EcoHub Logo" width={128} height={32} className="h-8 w-auto" />
+            </Link>
           </div>
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} EcoHub. All rights reserved.
