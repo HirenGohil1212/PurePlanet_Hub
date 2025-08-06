@@ -129,7 +129,8 @@ export function Navbar() {
                   <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
                 </Link>
               </div>
-              <div className="flex flex-col space-y-2 p-4">
+              <div className="flex-1 overflow-y-auto p-4">
+              <div className="flex flex-col space-y-2">
               {navLinks.map((link) =>
                 link.subLinks ? (
                   <div key={link.label}>
@@ -148,6 +149,7 @@ export function Navbar() {
                   </MobileNavLink>
                 )
               )}
+              </div>
               </div>
               </div>
             </SheetContent>
