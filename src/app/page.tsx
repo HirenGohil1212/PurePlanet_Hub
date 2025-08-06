@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Recycle, ShieldCheck, HardDrive, Leaf } from "lucide-react";
@@ -62,15 +62,24 @@ const services = [
   ];
 
 export default function Home() {
+    const plugin = React.useRef(
+        Autoplay({ delay: 2000, stopOnInteraction: true })
+    );
   return (
     <div className="fade-in">
       <section className="w-full">
         <div className="relative">
-          <Carousel className="w-full" opts={{ loop: true }}>
+          <Carousel 
+            className="w-full" 
+            opts={{ loop: true }}
+            plugins={[plugin.current]}
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+          >
             <CarouselContent>
               {carouselItems.map((item, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative h-[600px] w-full">
+                  <div className="relative h-screen w-full">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -101,8 +110,6 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-8 top-1/2 -translate-y-1/2 z-10 h-12 w-12 text-white" />
-            <CarouselNext className="absolute right-8 top-1/2 -translate-y-1/2 z-10 h-12 w-12 text-white" />
           </Carousel>
         </div>
       </section>
