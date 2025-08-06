@@ -11,7 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Recycle, ShieldCheck, HardDrive, Leaf, Users, Truck, Building, Newspaper, Handshake, Briefcase } from "lucide-react";
+import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail } from "lucide-react";
 
 const carouselItems = [
   {
@@ -282,18 +282,24 @@ export default function Home() {
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Ready to Make a Difference?
+              Have a question? Get in touch!
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Partner with us to manage your e-waste responsibly. Let's work together for a cleaner, greener planet.
+              Our team is here to help. Contact us for inquiries, partnership opportunities, or to schedule a pickup.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Button asChild size="lg">
-                <Link href="/about">About Us</Link>
+                <Link href="https://wa.me/11234567890" target="_blank">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    Send us on WhatsApp
+                </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
-                <Link href="/careers">Join Our Team</Link>
+                <Link href="mailto:contact@ecohub.com">
+                    <Mail className="mr-2 h-5 w-5" />
+                    Email Us
+                </Link>
             </Button>
           </div>
         </div>
