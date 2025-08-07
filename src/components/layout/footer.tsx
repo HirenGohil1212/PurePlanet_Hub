@@ -29,7 +29,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-start space-y-4">
                  <Link href="/">
-                    <Image src={`/logo1.png?t=${new Date().getTime()}`} alt="Pure Planet Recycling Logo" width={256} height={64} className="h-16 w-auto" />
+                    <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-16 w-auto" />
                 </Link>
                 <p className="text-sm text-muted-foreground">
                     Leading the charge in responsible e-waste and plastic management for a sustainable future.
