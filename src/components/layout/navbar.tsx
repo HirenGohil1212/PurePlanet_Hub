@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -78,7 +79,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-40 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center" style={{ height: '131%' }}>
-          <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
+          <Image src={`/logo1.png?t=${new Date().getTime()}`} alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -119,34 +120,34 @@ export function Navbar() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="flex flex-col w-full max-w-xs p-0">
-                <SheetHeader className="p-4 border-b">
-                  <SheetTitle className="sr-only">Menu</SheetTitle>
-                   <Link href="/" className="flex items-center h-24" onClick={() => setMobileMenuOpen(false)}>
-                    <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
-                  </Link>
-                </SheetHeader>
+            <SheetContent side="right" className="flex w-full max-w-xs flex-col p-0">
+              <SheetHeader className="border-b p-4">
+                <SheetTitle className="sr-only">Menu</SheetTitle>
+                <Link href="/" className="flex h-24 items-center" onClick={() => setMobileMenuOpen(false)}>
+                  <Image src={`/logo1.png?t=${new Date().getTime()}`} alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
+                </Link>
+              </SheetHeader>
               <div className="flex-1 overflow-y-auto p-4">
-              <div className="flex flex-col space-y-2">
-              {navLinks.map((link) =>
-                link.subLinks ? (
-                  <div key={link.label}>
-                    <h4 className="mb-2 text-lg font-semibold text-foreground">{link.label}</h4>
-                    <div className="flex flex-col space-y-2 pl-4">
-                      {link.subLinks.map((subLink) => (
-                        <MobileNavLink key={subLink.label} href={subLink.href}>
-                          {subLink.label}
-                        </MobileNavLink>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <MobileNavLink key={link.label} href={link.href}>
-                    {link.label}
-                  </MobileNavLink>
-                )
-              )}
-              </div>
+                <div className="flex flex-col space-y-2">
+                  {navLinks.map((link) =>
+                    link.subLinks ? (
+                      <div key={link.label}>
+                        <h4 className="mb-2 text-lg font-semibold text-foreground">{link.label}</h4>
+                        <div className="flex flex-col space-y-2 pl-4">
+                          {link.subLinks.map((subLink) => (
+                            <MobileNavLink key={subLink.label} href={subLink.href}>
+                              {subLink.label}
+                            </MobileNavLink>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <MobileNavLink key={link.label} href={link.href}>
+                        {link.label}
+                      </MobileNavLink>
+                    )
+                  )}
+                </div>
               </div>
             </SheetContent>
           </Sheet>
