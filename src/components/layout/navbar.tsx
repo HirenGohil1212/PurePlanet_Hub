@@ -77,9 +77,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-36 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-32 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex h-full items-center">
-          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-auto w-auto object-contain" />
+          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
