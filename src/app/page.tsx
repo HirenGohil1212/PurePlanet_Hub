@@ -11,7 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail } from "lucide-react";
+import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck } from "lucide-react";
 
 const carouselItems = [
   {
@@ -58,6 +58,24 @@ const services = [
       title: "Plastic Waste",
       description: "Innovative solutions for plastic waste management, promoting a circular economy.",
       href: "/services/plastic-waste-management"
+    },
+    {
+      icon: <Users className="h-10 w-10 text-primary" />,
+      title: "Awareness Campaigns",
+      description: "Educating communities and corporations on the importance of sustainable waste management.",
+      href: "/services/environmental-awareness-campaigns"
+    },
+    {
+      icon: <Leaf className="h-10 w-10 text-primary" />,
+      title: "Compliance Management",
+      description: "Helping businesses navigate environmental regulations and meet their EPR obligations.",
+      href: "/services/compliance-management"
+    },
+    {
+      icon: <Truck className="h-10 w-10 text-primary" />,
+      title: "Reverse Logistics",
+      description: "Efficient and secure collection and transportation of waste from consumers back to our facilities.",
+      href: "/services/reverse-logistics"
     }
   ];
 
