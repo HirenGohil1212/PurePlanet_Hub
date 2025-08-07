@@ -76,7 +76,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center" style={{ height: '131%' }}>
           <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
         </Link>
@@ -122,7 +122,7 @@ export function Navbar() {
             <SheetContent side="right" className="w-full max-w-xs p-0">
                 <SheetHeader className="p-4 border-b">
                   <SheetTitle className="sr-only">Menu</SheetTitle>
-                   <Link href="/" className="flex items-center h-16" onClick={() => setMobileMenuOpen(false)}>
+                   <Link href="/" className="flex items-center h-20" onClick={() => setMobileMenuOpen(false)}>
                     <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
                   </Link>
                 </SheetHeader>
