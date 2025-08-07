@@ -76,8 +76,8 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-40 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center h-full">
+      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center" style={{ height: '131%' }}>
           <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
         </Link>
 
@@ -120,21 +120,18 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs p-0">
-                <SheetHeader>
+                <SheetHeader className="p-4 border-b">
                   <SheetTitle className="sr-only">Menu</SheetTitle>
+                   <Link href="/" className="flex items-center h-16" onClick={() => setMobileMenuOpen(false)}>
+                    <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
+                  </Link>
                 </SheetHeader>
-              <div className="flex h-full flex-col">
-              <div className="p-4 border-b">
-                <Link href="/" className="flex items-center h-16" onClick={() => setMobileMenuOpen(false)}>
-                  <Image src="/logo1.png" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
-                </Link>
-              </div>
               <div className="flex-1 overflow-y-auto p-4">
               <div className="flex flex-col space-y-2">
               {navLinks.map((link) =>
                 link.subLinks ? (
                   <div key={link.label}>
-                    <h4 className="mb-2 text-lg font-semibold text-muted-foreground">{link.label}</h4>
+                    <h4 className="mb-2 text-lg font-semibold text-foreground/80">{link.label}</h4>
                     <div className="flex flex-col space-y-2 pl-4">
                       {link.subLinks.map((subLink) => (
                         <MobileNavLink key={subLink.label} href={subLink.href}>
@@ -149,7 +146,6 @@ export function Navbar() {
                   </MobileNavLink>
                 )
               )}
-              </div>
               </div>
               </div>
             </SheetContent>
