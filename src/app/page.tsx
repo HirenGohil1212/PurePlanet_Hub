@@ -11,13 +11,13 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck } from "lucide-react";
+import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck, Target, Eye } from "lucide-react";
 
 const carouselItems = [
   {
     title: "E-Waste Recycling",
     description: "State-of-the-art facilities to process all types of electronic waste safely and efficiently.",
-    image: "/image1.png",
+    image: "https://placehold.co/1200x600.png",
     hint: "recycling plant",
     buttonText: "Learn More",
     href: "/services/e-waste-recycling",
@@ -25,7 +25,7 @@ const carouselItems = [
   {
     title: "Environmental Awareness Campaigns",
     description: "Educating communities and corporations on the importance of sustainable waste management.",
-    image: "/image2.png",
+    image: "https://placehold.co/1200x600.png",
     hint: "community seminar",
     buttonText: "Learn More",
     href: "/services/environmental-awareness-campaigns",
@@ -33,7 +33,7 @@ const carouselItems = [
   {
     title: "Compliance Management",
     description: "Helping businesses navigate environmental regulations and meet their EPR obligations.",
-    image: "/image3.png",
+    image: "https://placehold.co/1200x600.png",
     hint: "business compliance",
     buttonText: "Learn More",
     href: "/services/compliance-management",
@@ -41,7 +41,7 @@ const carouselItems = [
   {
     title: "Reverse Logistics",
     description: "Efficient and secure collection and transportation of waste from consumers back to our facilities.",
-    image: "/image4.png",
+    image: "https://placehold.co/1200x600.png",
     hint: "logistics truck",
     buttonText: "Learn More",
     href: "/services/reverse-logistics",
@@ -75,9 +75,27 @@ const services = [
     }
   ];
 
+const aboutItems = [
+    {
+      icon: <Target className="h-10 w-10 text-primary" />,
+      title: "Our Mission",
+      description: "To provide innovative and environmentally responsible solutions for managing electronic and plastic waste, contributing to a sustainable circular economy.",
+    },
+    {
+      icon: <Eye className="h-10 w-10 text-primary" />,
+      title: "Our Vision",
+      description: "To be a global leader in the e-waste management industry, setting new standards for sustainability, efficiency, and data security.",
+    },
+    {
+      icon: <Leaf className="h-10 w-10 text-primary" />,
+      title: "Our Values",
+      description: "Sustainability, Integrity, Innovation, Customer Centricity, and Safety are the core principles that guide every decision we make.",
+    }
+];
+
 export default function Home() {
     const plugin = React.useRef(
-        Autoplay({ delay: 2000, stopOnInteraction: false })
+        Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: false })
     );
   return (
     <div className="fade-in">
@@ -158,25 +176,35 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-          <div className="space-y-4">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Pure Planet Recycling</h2>
-            <p className="text-muted-foreground md:text-xl/relaxed">
-              Discover our mission to pioneer sustainable solutions for a cleaner planet. We are a team of passionate individuals committed to responsible e-waste management and environmental stewardship through innovative recycling programs.
-            </p>
-            <Button asChild size="lg">
-                <Link href="/about">Meet the Team</Link>
-            </Button>
-          </div>
-          <Image
-              src="https://placehold.co/600x400.png"
-              width="600"
-              height="400"
-              alt="About Pure Planet Recycling"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-              data-ai-hint="sustainable technology"
-            />
+       <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="space-y-2">
+                    <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Pioneering Sustainable Solutions</h2>
+                    <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                        Discover our mission to pioneer sustainable solutions for a cleaner planet. We are a team of passionate individuals committed to responsible e-waste management and environmental stewardship through innovative recycling programs.
+                    </p>
+                </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-stretch gap-8 py-12 sm:grid-cols-1 md:grid-cols-3">
+                {aboutItems.map((item, index) => (
+                    <Card key={index} className="flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                        <CardHeader className="flex flex-col items-center text-center">
+                            {item.icon}
+                            <CardTitle className="mt-4 font-headline">{item.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-center flex-grow">
+                            <p className="text-muted-foreground">{item.description}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+             <div className="text-center">
+                <Button asChild size="lg">
+                    <Link href="/about">Meet the Team</Link>
+                </Button>
+            </div>
         </div>
       </section>
 
@@ -324,5 +352,6 @@ export default function Home() {
       </section>
     </div>
   );
+}
 
     
