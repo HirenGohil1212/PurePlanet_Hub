@@ -83,14 +83,16 @@ export default function ContactPage() {
       </section>
 
        <section className="w-full">
-        <Image
-          src="https://placehold.co/1920x480.png"
-          width={1920}
-          height={480}
-          alt="Office Location Map"
-          className="w-full h-[480px] object-cover"
-          data-ai-hint="office map location"
-        />
+        <iframe
+            src="https://maps.google.com/maps?q=Gujarat&t=&z=7&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="480"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-[480px]"
+        ></iframe>
       </section>
     </div>
   );
