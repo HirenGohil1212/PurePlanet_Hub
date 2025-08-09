@@ -77,9 +77,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex h-full items-center">
-          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={160} height={40} className="h-10 w-auto object-contain" />
+          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={160} height={40} className="h-16 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -89,7 +89,7 @@ export function Navbar() {
               <DropdownMenu key={link.label}>
                 <DropdownMenuTrigger asChild>
                   <Button variant="link" className={cn(
-                    "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-lg",
+                    "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-xl",
                     pathname.startsWith(link.href) ? "text-primary font-semibold" : ""
                   )}>
                     {link.label}
