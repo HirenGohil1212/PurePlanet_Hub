@@ -50,31 +50,28 @@ export default function InfrastructurePage() {
       </section>
 
       <section className="w-full py-12 md:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
-            {facilities.map((facility, index) => (
-              <Card key={index} className="overflow-hidden transition-shadow duration-300 hover:shadow-xl">
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={facility.image}
-                    alt={facility.title}
-                    layout="fill"
-                    objectFit="cover"
-                    data-ai-hint={facility.hint}
-                  />
+        <div className="container px-4 md:px-6 space-y-12">
+          {facilities.map((facility, index) => (
+            <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className={index % 2 === 0 ? 'md:order-1' : 'md:order-2'}>
+                <Image
+                  src={facility.image}
+                  width={600}
+                  height={400}
+                  alt={facility.title}
+                  className="rounded-xl object-cover w-full aspect-video"
+                  data-ai-hint={facility.hint}
+                />
+              </div>
+              <div className={index % 2 === 0 ? 'md:order-2' : 'md:order-1'}>
+                <div className="space-y-4">
+                  <div className="inline-block">{facility.icon}</div>
+                  <h3 className="font-headline text-2xl font-bold">{facility.title}</h3>
+                  <p className="text-muted-foreground text-lg">{facility.description}</p>
                 </div>
-                <CardHeader className="flex flex-row items-start gap-4">
-                  {facility.icon}
-                  <div className="flex-grow">
-                    <CardTitle className="font-headline text-2xl">{facility.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{facility.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

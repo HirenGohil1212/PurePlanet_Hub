@@ -48,7 +48,7 @@ export function Navbar() {
       <Link
         href={href}
         className={cn(
-          "transition-colors hover:text-primary",
+          "transition-colors hover:text-primary text-lg",
           isActive ? "text-primary font-semibold" : "text-muted-foreground"
         )}
         onClick={() => setMobileMenuOpen(false)}
@@ -77,9 +77,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 md:h-28">
+      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 md:h-24">
         <Link href="/" className="flex h-full items-center">
-          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto object-contain" />
+          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={180} height={45} className="h-auto w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -89,7 +89,7 @@ export function Navbar() {
               <DropdownMenu key={link.label}>
                 <DropdownMenuTrigger asChild>
                   <Button variant="link" className={cn(
-                    "text-muted-foreground transition-colors hover:text-primary hover:no-underline",
+                    "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-lg",
                     pathname.startsWith(link.href) ? "text-primary font-semibold" : ""
                   )}>
                     {link.label}
@@ -123,8 +123,8 @@ export function Navbar() {
             <SheetContent side="right" className="flex w-full max-w-xs flex-col p-0">
               <SheetHeader className="border-b p-4">
                 <SheetTitle className="sr-only">Menu</SheetTitle>
-                <Link href="/" className="flex h-24 items-center" onClick={() => setMobileMenuOpen(false)}>
-                  <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-full w-auto" />
+                <Link href="/" className="flex h-20 items-center" onClick={() => setMobileMenuOpen(false)}>
+                  <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={180} height={45} className="h-full w-auto" />
                 </Link>
               </SheetHeader>
               <div className="flex-1 overflow-y-auto p-4">

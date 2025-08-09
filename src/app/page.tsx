@@ -48,18 +48,6 @@ const services = [
       href: "/services/e-waste-recycling"
     },
     {
-      icon: <ShieldCheck className="h-10 w-10 text-primary" />,
-      title: "Data Destruction",
-      description: "Certified and secure destruction of data from all storage devices, ensuring complete privacy.",
-      href: "/services/data-destruction"
-    },
-    {
-      icon: <HardDrive className="h-10 w-10 text-primary" />,
-      title: "Plastic Waste",
-      description: "Innovative solutions for plastic waste management, promoting a circular economy.",
-      href: "/services/plastic-waste-management"
-    },
-    {
       icon: <Users className="h-10 w-10 text-primary" />,
       title: "Awareness Campaigns",
       description: "Educating communities and corporations on the importance of sustainable waste management.",
@@ -143,7 +131,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:grid-cols-4">
                 {services.map((service, index) => (
                     <Card key={index} className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                         <CardHeader className="flex flex-col items-center text-center">
@@ -208,6 +196,7 @@ export default function Home() {
         </div>
       </section>
       
+      {/* 
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-4">
@@ -229,6 +218,7 @@ export default function Home() {
             />
         </div>
       </section>
+      */}
 
        <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
@@ -252,6 +242,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/*
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-4">
@@ -273,7 +264,9 @@ export default function Home() {
             />
         </div>
       </section>
+      */}
 
+      {/*
       <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
              <Image
@@ -295,6 +288,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
