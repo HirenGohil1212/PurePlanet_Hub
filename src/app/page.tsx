@@ -19,7 +19,7 @@ const carouselItems = [
   {
     title: "E-Waste Recycling",
     description: "State-of-the-art facilities to process all types of electronic waste safely and efficiently.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image1.png",
     hint: "recycling plant",
     buttonText: "Learn More",
     href: "/services/e-waste-recycling",
@@ -27,7 +27,7 @@ const carouselItems = [
   {
     title: "Environmental Awareness Campaigns",
     description: "Educating communities and corporations on the importance of sustainable waste management.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image2.png",
     hint: "community seminar",
     buttonText: "Learn More",
     href: "/services/environmental-awareness-campaigns",
@@ -35,7 +35,7 @@ const carouselItems = [
   {
     title: "Compliance Management",
     description: "Helping businesses navigate environmental regulations and meet their EPR obligations.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image3.png",
     hint: "business compliance",
     buttonText: "Learn More",
     href: "/services/compliance-management",
@@ -43,7 +43,7 @@ const carouselItems = [
   {
     title: "Reverse Logistics",
     description: "Efficient and secure collection and transportation of waste from consumers back to our facilities.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image4.png",
     hint: "logistics truck",
     buttonText: "Learn More",
     href: "/services/reverse-logistics",
