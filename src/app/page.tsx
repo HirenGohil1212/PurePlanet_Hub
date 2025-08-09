@@ -15,28 +15,36 @@ import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck }
 
 const carouselItems = [
   {
-    title: "Revolutionizing E-Waste Management",
-    description: "Join us in creating a sustainable future by responsibly recycling your electronic waste.",
+    title: "E-Waste Recycling",
+    description: "State-of-the-art facilities to process all types of electronic waste safely and efficiently.",
     image: "https://placehold.co/1200x600.png",
     hint: "recycling plant",
-    buttonText: "Our Services",
+    buttonText: "Learn More",
     href: "/services/e-waste-recycling",
   },
   {
-    title: "Secure Data Destruction, Guaranteed",
-    description: "Protect your sensitive information with our certified data destruction services.",
+    title: "Environmental Awareness Campaigns",
+    description: "Educating communities and corporations on the importance of sustainable waste management.",
     image: "https://placehold.co/1200x600.png",
-    hint: "data center security",
+    hint: "community seminar",
     buttonText: "Learn More",
-    href: "/services/data-destruction",
+    href: "/services/environmental-awareness-campaigns",
   },
   {
-    title: "Championing Plastic Neutrality",
-    description: "From collection to recycling, we provide comprehensive plastic waste solutions.",
+    title: "Compliance Management",
+    description: "Helping businesses navigate environmental regulations and meet their EPR obligations.",
     image: "https://placehold.co/1200x600.png",
-    hint: "plastic recycling",
-    buttonText: "Explore Now",
-    href: "/services/plastic-waste-management",
+    hint: "business compliance",
+    buttonText: "Learn More",
+    href: "/services/compliance-management",
+  },
+  {
+    title: "Reverse Logistics",
+    description: "Efficient and secure collection and transportation of waste from consumers back to our facilities.",
+    image: "https://placehold.co/1200x600.png",
+    hint: "logistics truck",
+    buttonText: "Learn More",
+    href: "/services/reverse-logistics",
   },
 ];
 
@@ -316,4 +324,5 @@ export default function Home() {
       </section>
     </div>
   );
-}
+
+    
