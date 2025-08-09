@@ -8,7 +8,7 @@ const servicesData = {
     title: "E-waste Recycling",
     icon: <Recycle className="h-12 w-12 text-primary" />,
     description: "Our comprehensive e-waste recycling service ensures that your discarded electronics are processed in an environmentally sound manner. We recover valuable materials and safely dispose of hazardous components, adhering to the highest industry standards.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image1.png",
     hint: "electronic waste recycling",
     features: [
       "Collection and transportation from your premises.",
@@ -50,7 +50,7 @@ const servicesData = {
     title: "Environmental Awareness Campaigns",
     icon: <Users className="h-12 w-12 text-primary" />,
     description: "We believe that education is key to driving change. Our awareness campaigns are designed to educate communities, schools, and corporations about the importance of proper waste management and sustainable practices.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image2.png",
     hint: "community seminar",
     features: [
       "Customized workshops and seminars.",
@@ -65,7 +65,7 @@ const servicesData = {
     title: "Compliance Management",
     icon: <Leaf className="h-12 w-12 text-primary" />,
     description: "Navigating the complex landscape of environmental regulations can be daunting. Our compliance management services help your business stay compliant with all national and international e-waste and plastic waste regulations.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image3.png",
     hint: "legal documents compliance",
     features: [
       "Extended Producer Responsibility (EPR) fulfillment.",
@@ -79,7 +79,7 @@ const servicesData = {
     title: "Reverse Logistics",
     icon: <Truck className="h-12 w-12 text-primary" />,
     description: "Our efficient and secure reverse logistics network is the backbone of our operations. We manage the entire process of collecting and transporting waste from consumers back to our processing facilities, ensuring a seamless and reliable service.",
-    image: "https://placehold.co/1200x600.png",
+    image: "/image4.png",
     hint: "logistics truck fleet",
     features: [
       "Nationwide collection network.",
