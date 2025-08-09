@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +12,8 @@ import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck, Target, Eye } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const carouselItems = [
   {
@@ -97,6 +99,16 @@ export default function Home() {
     const plugin = React.useRef(
         Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: false })
     );
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const formattedMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const mailtoLink = `mailto:contact@pureplanetrecycling.com?subject=Contact Inquiry from ${name}&body=${encodeURIComponent(formattedMessage)}`;
+    const whatsappLink = `https://wa.me/11234567890?text=${encodeURIComponent(formattedMessage)}`;
+
+
   return (
     <div className="fade-in">
       <section className="w-full">
@@ -230,30 +242,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* 
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-          <div className="space-y-4">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pure Planet Recycling Insights</h2>
-            <p className="text-muted-foreground md:text-xl/relaxed">
-             Stay informed with our latest articles, news, and insights. Our blog covers everything from the dangers of e-waste to tips for organizing community recycling drives and understanding corporate compliance.
-            </p>
-            <Button asChild size="lg">
-                <Link href="/blog">Read Our Blog</Link>
-            </Button>
-          </div>
-          <Image
-              src="https://placehold.co/600x400.png"
-              width="600"
-              height="400"
-              alt="Blog"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-              data-ai-hint="person reading article"
-            />
-        </div>
-      </section>
-      */}
-
        <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
              <Image
@@ -276,54 +264,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/*
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-          <div className="space-y-4">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Valued Partners</h2>
-            <p className="text-muted-foreground md:text-xl/relaxed">
-              Collaboration is key to our success. We are proud to partner with leading technology corporations, non-profits, and city governments to amplify our impact and drive the circular economy forward.
-            </p>
-            <Button asChild size="lg">
-                <Link href="/partners">Meet Our Partners</Link>
-            </Button>
-          </div>
-          <Image
-              src="https://placehold.co/600x400.png"
-              width="600"
-              height="400"
-              alt="Partners"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-              data-ai-hint="business handshake"
-            />
-        </div>
-      </section>
-      */}
-
-      {/*
-      <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-             <Image
-              src="https://placehold.co/600x400.png"
-              width="600"
-              height="400"
-              alt="Careers"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover order-last lg:order-first"
-              data-ai-hint="diverse team working"
-            />
-          <div className="space-y-4 lg:text-right">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Join Our Mission</h2>
-            <p className="text-muted-foreground md:text-xl/relaxed">
-              Are you passionate about sustainability and technology? Explore rewarding career opportunities at Pure Planet Recycling and help us build a greener future. We're looking for innovative individuals to join our growing team.
-            </p>
-            <Button asChild size="lg">
-                <Link href="/careers">Explore Careers</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-      */}
-
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
@@ -334,17 +274,22 @@ export default function Home() {
               Our team is here to help. Contact us for inquiries, partnership opportunities, or to schedule a pickup.
             </p>
           </div>
-          <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
+          <div className="mx-auto w-full max-w-sm space-y-4">
+              <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+              <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <Textarea placeholder="Your Message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} />
+          </div>
+          <div className="mt-4 flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Button asChild size="lg">
-                <Link href="https://wa.me/11234567890" target="_blank">
+                <Link href={whatsappLink} target="_blank">
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    Send us on WhatsApp
+                    Send on WhatsApp
                 </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
-                <Link href="mailto:contact@pureplanetrecycling.com">
+                <Link href={mailtoLink}>
                     <Mail className="mr-2 h-5 w-5" />
-                    Email Us
+                    Send on Email
                 </Link>
             </Button>
           </div>
