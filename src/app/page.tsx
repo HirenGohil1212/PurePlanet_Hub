@@ -96,7 +96,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                       <div className="bg-black/30 p-8 rounded-lg">
-                        <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                        <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                           {item.title}
                         </h1>
                         <p className="mt-4 max-w-[600px] text-lg md:text-xl">
@@ -124,8 +124,8 @@ export default function Home() {
         <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Commitment</div>
-                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Your Partner in Sustainability</h2>
+                    <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive EPR Solutions</h2>
                     <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         At Pure Planet Recycling, we are dedicated to providing comprehensive and responsible solutions for e-waste and plastic management. We believe in creating a circular economy where waste is transformed into valuable resources.
                     </p>
