@@ -70,7 +70,7 @@ export default function CareersPage() {
               </div>
             </div>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/image7.png"
               width="600"
               height="400"
               alt="Pure Planet Recycling Team"
