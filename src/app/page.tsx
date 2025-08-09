@@ -223,7 +223,7 @@ export default function Home() {
       <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/image5.png"
               width="600"
               height="400"
               alt="EPR Services"
@@ -245,7 +245,7 @@ export default function Home() {
        <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
              <Image
-              src="https://placehold.co/600x400.png"
+              src="/image6.png"
               width="600"
               height="400"
               alt="Infrastructure"
