@@ -69,7 +69,7 @@ const services = [
 
 export default function Home() {
     const plugin = React.useRef(
-        Autoplay({ delay: 2000, stopOnInteraction: true })
+        Autoplay({ delay: 2000, stopOnInteraction: false })
     );
   return (
     <div className="fade-in">
@@ -79,8 +79,6 @@ export default function Home() {
             className="w-full" 
             opts={{ loop: true }}
             plugins={[plugin.current]}
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
               {carouselItems.map((item, index) => (
@@ -125,7 +123,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                     <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
-                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive EPR Solutions</h2>
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Your Partner in Sustainability</h2>
                     <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         At Pure Planet Recycling, we are dedicated to providing comprehensive and responsible solutions for e-waste and plastic management. We believe in creating a circular economy where waste is transformed into valuable resources.
                     </p>
