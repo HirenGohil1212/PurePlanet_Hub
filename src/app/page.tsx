@@ -54,7 +54,7 @@ const services = [
     {
       icon: <Recycle className="h-10 w-10 text-primary" />,
       title: "E-Waste Recycling",
-      description: "State-of-the-art facilities to process all types of electronic waste safely and efficiently.",
+      description: "Safe and efficient processing of all types of electronic waste in our state-of-the-art facilities.",
       href: "/services/e-waste-recycling"
     },
     {
