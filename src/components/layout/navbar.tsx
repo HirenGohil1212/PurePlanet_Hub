@@ -90,7 +90,9 @@ export function Navbar() {
                       "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-lg",
                       pathname.startsWith(link.href) ? "text-primary font-semibold" : ""
                     )}>
-                      {link.label}
+                      <Link href={link.href} className="flex items-center gap-1">
+                        {link.label}
+                      </Link>
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
@@ -138,8 +140,8 @@ export function Navbar() {
                   {navLinks.map((link) =>
                     link.subLinks ? (
                       <div key={link.label}>
-                        <h4 className="mb-2 text-lg font-semibold text-foreground">{link.label}</h4>
-                        <div className="flex flex-col space-y-2 pl-4">
+                        <MobileNavLink href={link.href}>{link.label}</MobileNavLink>
+                        <div className="flex flex-col space-y-2 pl-4 border-l ml-2 mt-2">
                           {link.subLinks.map((subLink) => (
                             <MobileNavLink key={subLink.label} href={subLink.href}>
                               {subLink.label}
