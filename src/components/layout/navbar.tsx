@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from "react";
@@ -74,23 +73,25 @@ export function Navbar() {
           <nav className="flex items-center space-x-4">
             {navLinks.map((link) =>
               link.subLinks ? (
-                <DropdownMenu key={link.label}>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="flex items-center gap-1 text-lg text-muted-foreground hover:text-primary focus-visible:ring-0">
-                      <Link href={link.href} className="transition-colors hover:text-primary">
+                <div className="flex items-center gap-1" key={link.label}>
+                    <NavLink href={link.href}>
                         {link.label}
-                      </Link>
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    {link.subLinks.map((subLink) => (
-                      <DropdownMenuItem key={subLink.label} asChild>
-                        <Link href={subLink.href}>{subLink.label}</Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                    </NavLink>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                           <Button variant="ghost" size="icon" className="h-8 w-6">
+                             <ChevronDown className="h-4 w-4" />
+                           </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            {link.subLinks.map((subLink) => (
+                            <DropdownMenuItem key={subLink.label} asChild>
+                                <Link href={subLink.href}>{subLink.label}</Link>
+                            </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </div>
               ) : (
                 <NavLink key={link.label} href={link.href}>
                   {link.label}
