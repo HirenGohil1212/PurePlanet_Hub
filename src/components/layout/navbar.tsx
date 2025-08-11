@@ -85,8 +85,8 @@ export function Navbar() {
             {navLinks.map((link) =>
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
-                  <DropdownMenuTrigger>
-                    <div className="flex items-center gap-1">
+                  <DropdownMenuTrigger asChild>
+                    <div className="flex items-center gap-1 cursor-pointer">
                        <Link
                         href={link.href}
                         className={cn(
