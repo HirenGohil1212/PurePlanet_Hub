@@ -77,10 +77,7 @@ export function Navbar() {
                 <DropdownMenu key={link.label}>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="flex items-center gap-1 text-lg text-muted-foreground hover:text-primary focus-visible:ring-0">
-                       <Link
-                        href={link.href}
-                        className="transition-colors hover:text-primary text-lg"
-                      >
+                      <Link href={link.href} className="transition-colors hover:text-primary">
                         {link.label}
                       </Link>
                       <ChevronDown className="h-4 w-4" />
