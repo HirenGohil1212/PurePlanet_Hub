@@ -4,7 +4,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
@@ -30,9 +30,9 @@ const navLinks = [
       { href: "/services/reverse-logistics", label: "Reverse Logistics" },
     ],
   },
-  { href: "/careers", label: "Careers" },
   { href: "/infrastructure", label: "Infrastructure" },
   { href: "/contact", label: "Contact Us" },
+  { href: "/careers", label: "Careers" },
 ];
 
 export function Navbar() {
@@ -45,7 +45,7 @@ export function Navbar() {
       <Link
         href={href}
         className={cn(
-          "transition-colors hover:text-primary text-xl",
+          "transition-colors hover:text-primary text-lg",
           isActive ? "text-primary font-semibold" : "text-muted-foreground"
         )}
         onClick={() => setMobileMenuOpen(false)}
@@ -76,37 +76,46 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex h-full items-center">
-          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={160} height={40} className="h-16 w-auto object-contain" />
+          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={160} height={40} className="h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center space-x-6 md:flex">
-          {navLinks.map((link) =>
-            link.subLinks ? (
-              <DropdownMenu key={link.label}>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="link" className={cn(
-                    "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-xl",
-                    pathname.startsWith(link.href) ? "text-primary font-semibold" : ""
-                  )}>
-                    {link.label}
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  {link.subLinks.map((subLink) => (
-                    <DropdownMenuItem key={subLink.label} asChild>
-                      <Link href={subLink.href}>{subLink.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <NavLink key={link.label} href={link.href}>
-                {link.label}
-              </NavLink>
-            )
-          )}
-        </nav>
+        <div className="hidden items-center space-x-4 md:flex">
+          <nav className="flex items-center space-x-4">
+            {navLinks.map((link) =>
+              link.subLinks ? (
+                <DropdownMenu key={link.label}>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="link" className={cn(
+                      "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-lg",
+                      pathname.startsWith(link.href) ? "text-primary font-semibold" : ""
+                    )}>
+                      {link.label}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    {link.subLinks.map((subLink) => (
+                      <DropdownMenuItem key={subLink.label} asChild>
+                        <Link href={subLink.href}>{subLink.label}</Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <NavLink key={link.label} href={link.href}>
+                  {link.label}
+                </NavLink>
+              )
+            )}
+          </nav>
+          <div className="flex items-center gap-2 rounded-md border border-primary/50 bg-primary/10 p-2">
+            <Phone className="h-5 w-5 text-primary"/>
+            <div className="flex flex-col text-sm">
+                <a href="tel:+1234567890" className="font-semibold text-primary hover:underline">(123) 456-7890</a>
+                <a href="tel:+11234567891" className="font-semibold text-primary hover:underline">(123) 456-7891</a>
+            </div>
+          </div>
+        </div>
 
         {/* Mobile Navigation */}
         <div className="md:hidden">
@@ -144,6 +153,13 @@ export function Navbar() {
                       </MobileNavLink>
                     )
                   )}
+                </div>
+                 <div className="mt-6 flex items-center gap-2 rounded-md border border-primary/50 bg-primary/10 p-2">
+                    <Phone className="h-5 w-5 text-primary"/>
+                    <div className="flex flex-col text-sm">
+                        <a href="tel:+1234567890" className="font-semibold text-primary hover:underline">(123) 456-7890</a>
+                        <a href="tel:+11234567891" className="font-semibold text-primary hover:underline">(123) 456-7891</a>
+                    </div>
                 </div>
               </div>
             </SheetContent>
