@@ -85,16 +85,19 @@ export function Navbar() {
             {navLinks.map((link) =>
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
-                  <div className="flex items-center">
-                    <NavLink href={link.href}>
-                      {link.label}
-                    </NavLink>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon" className="h-8 w-6">
-                        <ChevronDown className="h-4 w-4" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                  </div>
+                  <DropdownMenuTrigger asChild>
+                    <Link href={link.href} className="flex items-center gap-1">
+                       <span
+                        className={cn(
+                          "transition-colors hover:text-primary text-lg",
+                          pathname.startsWith(link.href) ? "text-primary font-semibold" : "text-muted-foreground"
+                        )}
+                      >
+                        {link.label}
+                      </span>
+                      <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
+                  </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     {link.subLinks.map((subLink) => (
                       <DropdownMenuItem key={subLink.label} asChild>
