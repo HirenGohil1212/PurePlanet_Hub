@@ -3,7 +3,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
@@ -36,18 +35,13 @@ const navLinks = [
 ];
 
 export function Navbar() {
-  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-    const isActive = pathname === href;
     return (
       <Link
         href={href}
-        className={cn(
-          "transition-colors hover:text-primary text-lg",
-          isActive ? "text-primary font-semibold" : "text-muted-foreground"
-        )}
+        className="transition-colors hover:text-primary text-lg text-muted-foreground"
         onClick={() => setMobileMenuOpen(false)}
       >
         {children}
@@ -56,14 +50,10 @@ export function Navbar() {
   };
 
   const MobileNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-    const isActive = pathname === href;
     return (
       <Link
         href={href}
-        className={cn(
-          "block py-2 text-lg transition-colors hover:text-primary",
-          isActive ? "text-primary font-bold" : "text-foreground"
-        )}
+        className="block py-2 text-lg transition-colors hover:text-primary text-foreground"
         onClick={() => setMobileMenuOpen(false)}
       >
         {children}
@@ -87,12 +77,9 @@ export function Navbar() {
                 <DropdownMenu key={link.label}>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="flex items-center gap-1 text-lg text-muted-foreground hover:text-primary focus-visible:ring-0">
-                      <Link
+                       <Link
                         href={link.href}
-                        className={cn(
-                          "transition-colors hover:text-primary",
-                          pathname.startsWith(link.href) ? "text-primary font-semibold" : "text-muted-foreground"
-                        )}
+                        className="transition-colors hover:text-primary text-lg"
                       >
                         {link.label}
                       </Link>
