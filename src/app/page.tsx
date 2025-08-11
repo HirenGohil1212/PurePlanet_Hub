@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck, Target, Eye } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const carouselItems = [
   {
@@ -93,6 +94,11 @@ const aboutItems = [
       title: "Our Values",
       description: "Sustainability, Integrity, Innovation, Customer Centricity, and Safety are the core principles that guide every decision we make.",
     }
+];
+
+const teamMembers = [
+  { name: "Alex Johnson", role: "CEO & Founder", avatar: "AJ" },
+  { name: "Maria Garcia", role: "Head of Operations", avatar: "MG" },
 ];
 
 export default function Home() {
@@ -180,9 +186,23 @@ export default function Home() {
                     </Card>
                 ))}
             </div>
+             <div className="mx-auto grid max-w-md grid-cols-2 gap-8 py-12">
+                {teamMembers.map((member) => (
+                    <div key={member.name} className="flex flex-col items-center space-y-2">
+                        <Avatar className="h-24 w-24">
+                            <AvatarImage src={`https://placehold.co/100x100.png?text=${member.avatar}`} />
+                            <AvatarFallback>{member.avatar}</AvatarFallback>
+                        </Avatar>
+                        <div className="text-center">
+                            <p className="font-semibold">{member.name}</p>
+                            <p className="text-sm text-muted-foreground">{member.role}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
              <div className="text-center">
                 <Button asChild size="lg">
-                    <Link href="/about">Meet the Team</Link>
+                    <Link href="/about">Meet the Full Team</Link>
                 </Button>
             </div>
         </div>
