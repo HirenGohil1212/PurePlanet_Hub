@@ -60,7 +60,7 @@ const services = [
     {
       icon: <Users className="h-10 w-10 text-primary" />,
       title: "Awareness Campaigns",
-      description: "Educating communities and corporations on the importance of sustainable waste management.",
+      description: "Educating communities on sustainable waste management. We help businesses with EPR compliance.",
       href: "/services/environmental-awareness-campaigns"
     },
     {
@@ -199,14 +199,14 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:grid-cols-4">
+            <div className="mx-auto grid max-w-5xl items-stretch gap-8 py-12 sm:grid-cols-2 md:grid-cols-4">
                 {services.map((service, index) => (
-                    <Card key={index} className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <Card key={index} className="flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                         <CardHeader className="flex flex-col items-center text-center">
                             {service.icon}
                             <CardTitle className="mt-4 font-headline">{service.title}</CardTitle>
                         </CardHeader>
-                        <CardContent className="text-center">
+                        <CardContent className="text-center flex-grow">
                             <p className="text-muted-foreground">{service.description}</p>
                         </CardContent>
                         <CardFooter className="justify-center">
