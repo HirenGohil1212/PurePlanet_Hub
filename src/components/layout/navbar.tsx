@@ -4,7 +4,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
@@ -85,16 +85,16 @@ export function Navbar() {
             {navLinks.map((link) =>
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="link" className={cn(
-                      "text-muted-foreground transition-colors hover:text-primary hover:no-underline text-lg",
-                      pathname.startsWith(link.href) ? "text-primary font-semibold" : ""
-                    )}>
-                      <Link href={link.href} className="flex items-center gap-1">
-                        {link.label}
-                      </Link>
-                    </Button>
-                  </DropdownMenuTrigger>
+                  <div className="flex items-center">
+                    <NavLink href={link.href}>
+                      {link.label}
+                    </NavLink>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon" className="h-8 w-6">
+                        <ChevronDown className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                  </div>
                   <DropdownMenuContent>
                     {link.subLinks.map((subLink) => (
                       <DropdownMenuItem key={subLink.label} asChild>
