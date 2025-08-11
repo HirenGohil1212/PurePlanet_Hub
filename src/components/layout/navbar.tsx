@@ -36,11 +36,14 @@ const navLinks = [
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
-  const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode, className?: string }) => {
     return (
       <Link
         href={href}
-        className="transition-colors hover:text-primary text-lg text-muted-foreground"
+        className={cn(
+            "transition-colors hover:text-primary text-lg text-muted-foreground",
+             className
+        )}
         onClick={() => setMobileMenuOpen(false)}
       >
         {children}
@@ -69,8 +72,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center space-x-4 md:flex">
-          <nav className="flex items-center space-x-4">
+        <nav className="hidden items-center space-x-4 md:flex">
             {navLinks.map((link) =>
               link.subLinks ? (
                 <div className="flex items-center gap-1" key={link.label}>
@@ -98,15 +100,14 @@ export function Navbar() {
                 </NavLink>
               )
             )}
-          </nav>
-          <div className="flex items-center gap-2 rounded-md border border-primary/50 bg-primary/10 p-2">
-            <Phone className="h-5 w-5 text-primary"/>
-            <div className="flex flex-col text-sm">
-                <a href="tel:+1234567890" className="font-semibold text-primary hover:underline">(123) 456-7890</a>
-                <a href="tel:+11234567891" className="font-semibold text-primary hover:underline">(123) 456-7891</a>
+            <div className="flex items-center gap-2 rounded-md border border-primary/50 bg-primary/10 p-2">
+                <Phone className="h-5 w-5 text-primary"/>
+                <div className="flex flex-col text-sm">
+                    <a href="tel:+1234567890" className="font-semibold text-primary hover:underline">(123) 456-7890</a>
+                    <a href="tel:+11234567891" className="font-semibold text-primary hover:underline">(123) 456-7891</a>
+                </div>
             </div>
-          </div>
-        </div>
+        </nav>
 
         {/* Mobile Navigation */}
         <div className="md:hidden">
