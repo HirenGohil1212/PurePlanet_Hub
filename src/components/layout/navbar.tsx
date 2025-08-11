@@ -86,18 +86,18 @@ export function Navbar() {
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
                   <DropdownMenuTrigger asChild>
-                    <div className="flex items-center gap-1 cursor-pointer">
-                       <Link
+                    <Button variant="ghost" className="flex items-center gap-1 text-lg text-muted-foreground hover:text-primary focus-visible:ring-0">
+                      <Link
                         href={link.href}
                         className={cn(
-                          "transition-colors hover:text-primary text-lg",
+                          "transition-colors hover:text-primary",
                           pathname.startsWith(link.href) ? "text-primary font-semibold" : "text-muted-foreground"
                         )}
                       >
                         {link.label}
                       </Link>
-                      <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-hover:rotate-180" />
-                    </div>
+                      <ChevronDown className="h-4 w-4" />
+                    </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     {link.subLinks.map((subLink) => (
