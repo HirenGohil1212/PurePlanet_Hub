@@ -98,7 +98,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl fade-in-up">
               {post.title}
             </h1>
             <div className="flex items-center space-x-4 text-muted-foreground">

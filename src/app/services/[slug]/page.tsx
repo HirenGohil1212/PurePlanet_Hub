@@ -196,7 +196,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             {service.icon}
-            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl fade-in-up">
               {service.title}
             </h1>
             <p className="max-w-[900px] text-muted-foreground md:text-xl">
