@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image";
@@ -7,15 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function ContactPage() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [mobile, setMobile] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
-    const formattedMessage = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const formattedMessage = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\n\nMessage:\n${message}`;
     const mailtoLink = `mailto:contact@pureplanetrecycling.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedMessage)}`;
     const whatsappLink = `https://wa.me/11234567890?text=${encodeURIComponent(formattedMessage)}`;
 
@@ -70,6 +72,35 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </div>
+            <div className="space-y-2">
+                <h2 className="text-2xl font-bold font-headline">Follow Us</h2>
+                 <div className="flex space-x-4">
+                    <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                        <Facebook className="h-6 w-6 text-primary" />
+                        <span className="sr-only">Facebook</span>
+                    </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                        <Linkedin className="h-6 w-6 text-primary" />
+                        <span className="sr-only">LinkedIn</span>
+                    </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                        <Twitter className="h-6 w-6 text-primary" />
+                        <span className="sr-only">Twitter</span>
+                    </Link>
+                    </Button>
+                     <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                        <Instagram className="h-6 w-6 text-primary" />
+                        <span className="sr-only">Instagram</span>
+                    </Link>
+                    </Button>
+                </div>
+            </div>
           </div>
           <div className="space-y-8">
             <div className="space-y-2">
@@ -81,6 +112,7 @@ export default function ContactPage() {
                     <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                         <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
                         <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <Input type="tel" placeholder="Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
                         <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
                         <Textarea placeholder="Your Message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
                         <div className="flex flex-col sm:flex-row gap-2">
