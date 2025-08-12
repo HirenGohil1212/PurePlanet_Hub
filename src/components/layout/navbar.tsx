@@ -31,8 +31,6 @@ const navLinks = [
   { href: "/infrastructure", label: "Infrastructure" },
   { href: "/contact", label: "Contact Us" },
   { href: "/careers", label: "Careers" },
-  { href: "/blog", label: "Blog" },
-  { href: "/partners", label: "Partners" },
 ];
 
 export function Navbar() {
