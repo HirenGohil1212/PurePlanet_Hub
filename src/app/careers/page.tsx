@@ -85,7 +85,7 @@ export default function CareersPage() {
   const getWhatsAppLink = (jobTitle: string) => {
     const message = `I would like to apply for the position of ${jobTitle}.`;
     return `https://wa.me/11234567890?text=${encodeURIComponent(message)}`;
-  }
+  };
 
   return (
     <div className="fade-in">
