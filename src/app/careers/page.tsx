@@ -1,8 +1,13 @@
+
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Briefcase, Heart, TreePine, Users } from "lucide-react";
+import { Briefcase, Heart, TreePine, Users, Mail } from "lucide-react";
 
 const jobOpenings = [
   {
@@ -10,28 +15,44 @@ const jobOpenings = [
     title: "Logistics Manager",
     location: "New York, NY",
     department: "Operations",
-    description: "We are seeking an experienced Logistics Manager to oversee our reverse logistics operations. The ideal candidate will have a strong background in supply chain management and a passion for sustainability.",
+    experience: "4 to 5 Yrs. in logistics and supply chain management.",
+    package: "Competitive, based on experience.",
+    noticePeriod: "Immediate to 30 Days",
+    jd: "We are seeking an experienced Logistics Manager to oversee our reverse logistics operations. The ideal candidate will have a strong background in supply chain management and a passion for sustainability.",
+    education: "B.B.A or M.B.A in Supply Chain Management.",
   },
   {
     id: "data-security-specialist",
     title: "Data Security Specialist",
     location: "San Francisco, CA",
     department: "IT & Security",
-    description: "Join our team as a Data Security Specialist to ensure the secure handling and destruction of sensitive data. Certifications like CISSP or CISM are a plus.",
+    experience: "2 to 3 Yrs. in IT security and data management.",
+    package: "Competitive, based on experience.",
+    noticePeriod: "Immediate to 15 Days",
+    jd: "Join our team as a Data Security Specialist to ensure the secure handling and destruction of sensitive data. Certifications like CISSP or CISM are a plus. Must have knowledge of data privacy regulations.",
+    education: "B.S. in Cybersecurity or related field.",
   },
   {
     id: "environmental-educator",
     title: "Environmental Educator",
     location: "Remote",
     department: "Community Outreach",
-    description: "We are looking for an enthusiastic Environmental Educator to lead our awareness campaigns. This role involves creating educational materials and conducting workshops for communities and corporations.",
+    experience: "1 to 2 Yrs. in environmental science or education.",
+    package: "Competitive, based on experience.",
+    noticePeriod: "Immediate to 30 Days",
+    jd: "We are looking for an enthusiastic Environmental Educator to lead our awareness campaigns. This role involves creating educational materials and conducting workshops for communities and corporations.",
+    education: "B.S. in Environmental Science or Education.",
   },
     {
     id: "recycling-technician",
     title: "Recycling Technician",
     location: "Chicago, IL",
     department: "Plant Operations",
-    description: "Responsible for sorting, dismantling, and processing electronic waste in our state-of-the-art facility. Must be safety-conscious and detail-oriented.",
+    experience: "0 to 1 Yr. in a plant or factory environment.",
+    package: "Competitive, based on experience.",
+    noticePeriod: "Immediate",
+    jd: "Responsible for sorting, dismantling, and processing electronic waste in our state-of-the-art facility. Must be safety-conscious and detail-oriented. Ability to work in shifts.",
+    education: "High School Diploma or equivalent.",
   },
 ];
 
@@ -54,6 +75,18 @@ const benefits = [
 ]
 
 export default function CareersPage() {
+
+  const getMailtoLink = (jobTitle: string) => {
+    const subject = `Application for the position of ${jobTitle}`;
+    const body = `Dear Hiring Manager,\n\nPlease find my resume attached for the position of ${jobTitle}.\n\nThank you,\n[Your Name]`;
+    return `mailto:careers@pureplanetrecycling.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const getWhatsAppLink = (jobTitle: string) => {
+    const message = `I would like to apply for the position of ${jobTitle}.`;
+    return `https://wa.me/11234567890?text=${encodeURIComponent(message)}`;
+  }
+
   return (
     <div className="fade-in">
       <section className="w-full bg-primary/10 py-12 md:py-24 lg:py-32">
@@ -130,8 +163,42 @@ export default function CareersPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="p-4">
-                    <p className="mb-4 text-muted-foreground">{job.description}</p>
-                    <Button>Apply Now</Button>
+                    <div className="space-y-4 text-muted-foreground">
+                      <div>
+                        <span className="font-semibold text-foreground">Experience: </span>
+                        {job.experience}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground">Package: </span>
+                        {job.package}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground">Notice Period: </span>
+                        {job.noticePeriod}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground">Job Description: </span>
+                        {job.jd}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground">Education: </span>
+                        {job.education}
+                      </div>
+                      <div className="flex flex-col sm:flex-row gap-2 pt-4">
+                           <Button asChild className="w-full">
+                              <Link href={getWhatsAppLink(job.title)} target="_blank">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                  Apply on WhatsApp
+                              </Link>
+                          </Button>
+                          <Button asChild variant="secondary" className="w-full">
+                              <Link href={getMailtoLink(job.title)}>
+                                  <Mail className="mr-2 h-5 w-5" />
+                                  Apply on Email
+                              </Link>
+                          </Button>
+                      </div>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}
