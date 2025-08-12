@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -11,7 +12,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck, Target, Eye } from "lucide-react";
+import { ArrowRight, Recycle, ShieldCheck, HardDrive, Mail, Users, Leaf, Truck, Target, Eye, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -108,10 +109,12 @@ export default function Home() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [mobile, setMobile] = useState('');
+    const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
-    const formattedMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-    const mailtoLink = `mailto:contact@pureplanetrecycling.com?subject=Contact Inquiry from ${name}&body=${encodeURIComponent(formattedMessage)}`;
+    const formattedMessage = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:contact@pureplanetrecycling.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedMessage)}`;
     const whatsappLink = `https://wa.me/11234567890?text=${encodeURIComponent(formattedMessage)}`;
 
 
@@ -284,37 +287,105 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-          <div className="space-y-3">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Have a question? Get in touch!
-            </h2>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Our team is here to help. Contact us for inquiries, partnership opportunities, or to schedule a pickup.
+       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
+            <p className="max-w-[700px] text-muted-foreground md:text-xl">
+              We're here to help and answer any question you might have. We look forward to hearing from you.
             </p>
           </div>
-          <div className="mx-auto w-full max-w-sm space-y-4">
-              <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
-              <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-              <Textarea placeholder="Your Message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} />
-          </div>
-          <div className="mt-4 flex flex-col gap-2 min-[400px]:flex-row justify-center">
-            <Button asChild size="lg">
-                <Link href={whatsappLink} target="_blank">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    Send on WhatsApp
-                </Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-                <Link href={mailtoLink}>
-                    <Mail className="mr-2 h-5 w-5" />
-                    Send on Email
-                </Link>
-            </Button>
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Card>
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <MapPin className="h-6 w-6 text-primary" />
+                    <CardTitle>Our Office</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">123 Sustainability Ave,<br/>Green City, PC 12345</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <Mail className="h-6 w-6 text-primary" />
+                    <CardTitle>Email Us</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary">contact@pureplanetrecycling.com</a>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <Phone className="h-6 w-6 text-primary" />
+                    <CardTitle>Call Us</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">(123) 456-7890</a>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold font-headline">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                      <Facebook className="h-6 w-6 text-primary" />
+                      <span className="sr-only">Facebook</span>
+                    </Link>
+                  </Button>
+                  <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                      <Linkedin className="h-6 w-6 text-primary" />
+                      <span className="sr-only">LinkedIn</span>
+                    </Link>
+                  </Button>
+                  <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                      <Twitter className="h-6 w-6 text-primary" />
+                      <span className="sr-only">Twitter</span>
+                    </Link>
+                  </Button>
+                  <Button variant="ghost" size="icon" asChild>
+                    <Link href="#">
+                      <Instagram className="h-6 w-6 text-primary" />
+                      <span className="sr-only">Instagram</span>
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <Card>
+              <CardContent className="p-6">
+                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                  <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                  <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <Input type="tel" placeholder="Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+                  <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                  <Textarea placeholder="Your Message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <Button asChild className="w-full">
+                      <Link href={whatsappLink} target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        Send on WhatsApp
+                      </Link>
+                    </Button>
+                    <Button asChild variant="secondary" className="w-full">
+                      <Link href={mailtoLink}>
+                        <Mail className="mr-2 h-5 w-5" />
+                        Send on Email
+                      </Link>
+                    </Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
     </div>
   );
 }
+
+  
