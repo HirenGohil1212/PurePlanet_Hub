@@ -103,7 +103,7 @@ export default function CareersPage() {
               </div>
             </div>
             <Image
-              src="/image7.png"
+              src="https://placehold.co/600x400.png"
               width="600"
               height="400"
               alt="Pure Planet Recycling Team"
@@ -157,8 +157,8 @@ export default function CareersPage() {
                     <div className="flex w-full items-center justify-between pr-4">
                       <span>{job.title}</span>
                       <div className="text-right text-sm text-muted-foreground">
-                        <p>{job.department}</p>
-                        <p>{job.location}</p>
+                        <div>{job.department}</div>
+                        <div>{job.location}</div>
                       </div>
                     </div>
                   </AccordionTrigger>
@@ -237,5 +237,4 @@ export default function CareersPage() {
       </section>
     </div>
   );
-
-    
+}
