@@ -66,41 +66,41 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex h-full items-center">
-          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={160} height={40} className="h-12 w-auto object-contain" />
+          <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={180} height={45} className="h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center space-x-4 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) =>
               link.subLinks ? (
-                <div className="flex items-center gap-1" key={link.label}>
-                    <NavLink href={link.href}>
-                        {link.label}
-                    </NavLink>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                           <Button variant="ghost" size="icon" className="h-8 w-6">
-                             <ChevronDown className="h-4 w-4" />
-                           </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            {link.subLinks.map((subLink) => (
-                            <DropdownMenuItem key={subLink.label} asChild>
-                                <Link href={subLink.href}>{subLink.label}</Link>
-                            </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                </div>
+                <DropdownMenu key={link.label}>
+                  <div className="flex items-center">
+                      <NavLink href={link.href}>
+                          {link.label}
+                      </NavLink>
+                      <DropdownMenuTrigger asChild>
+                         <Button variant="ghost" size="icon" className="h-8 w-6">
+                           <ChevronDown className="h-4 w-4" />
+                         </Button>
+                      </DropdownMenuTrigger>
+                  </div>
+                  <DropdownMenuContent>
+                      {link.subLinks.map((subLink) => (
+                      <DropdownMenuItem key={subLink.label} asChild>
+                          <Link href={subLink.href}>{subLink.label}</Link>
+                      </DropdownMenuItem>
+                      ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               ) : (
                 <NavLink key={link.label} href={link.href}>
                   {link.label}
                 </NavLink>
               )
             )}
-            <div className="flex items-center gap-2 rounded-md border border-primary/50 bg-primary/10 p-2">
+            <div className="flex items-center gap-2 rounded-md border-l border-primary/50 px-4">
                 <Phone className="h-5 w-5 text-primary"/>
                 <div className="flex flex-col text-sm">
                     <a href="tel:+1234567890" className="font-semibold text-primary hover:underline">(123) 456-7890</a>
