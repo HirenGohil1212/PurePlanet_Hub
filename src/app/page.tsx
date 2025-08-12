@@ -149,7 +149,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                       <div className="bg-black/30 p-8 rounded-lg">
-                        <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                        <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl fade-in-up">
                           {item.title}
                         </h1>
                         <p className="mt-4 max-w-[600px] text-lg md:text-xl">
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                     <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
-                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Pioneering Sustainable Solutions</h2>
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl fade-in-up">Pioneering Sustainable Solutions</h2>
                     <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         Discover our mission to pioneer sustainable solutions for a cleaner planet. We are a team of passionate individuals committed to responsible e-waste management and environmental stewardship through innovative recycling programs.
                     </p>
@@ -186,12 +186,12 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-stretch gap-8 py-12 sm:grid-cols-1 md:grid-cols-3">
                 {aboutItems.map((item, index) => (
-                    <Card key={index} className="flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                        <CardHeader className="flex flex-col items-center text-center">
+                    <Card key={index} className="flex flex-col text-center card-lift">
+                        <CardHeader className="flex flex-col items-center">
                             {item.icon}
                             <CardTitle className="mt-4 font-headline">{item.title}</CardTitle>
                         </CardHeader>
-                        <CardContent className="text-center flex-grow">
+                        <CardContent className="flex-grow">
                             <p className="text-muted-foreground">{item.description}</p>
                         </CardContent>
                     </Card>
@@ -199,7 +199,7 @@ export default function Home() {
             </div>
              <div className="mx-auto grid max-w-md grid-cols-2 gap-8 py-12">
                 {teamMembers.map((member) => (
-                    <div key={member.name} className="flex flex-col items-center space-y-2">
+                    <div key={member.name} className="flex flex-col items-center space-y-2 card-lift">
                         <Avatar className="h-24 w-24">
                             <AvatarImage src={`https://placehold.co/100x100.png?text=${member.avatar}`} />
                             <AvatarFallback>{member.avatar}</AvatarFallback>
@@ -224,7 +224,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                 <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
+                 <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none fade-in-up">
                   Comprehensive EPR Services
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -244,14 +244,14 @@ export default function Home() {
 
           <div className="mt-16">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Our Service Offerings</h2>
+                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl fade-in-up">Our Service Offerings</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-lg">
                   We offer a full suite of services to manage your e-waste and plastic waste responsibly, ensuring compliance and promoting sustainability.
                 </p>
               </div>
               <div className="grid gap-8 pt-12 md:grid-cols-2">
                 {services.map((service) => (
-                  <Card key={service.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl sm:flex-row">
+                  <Card key={service.title} className="flex flex-col overflow-hidden sm:flex-row card-lift">
                     <CardHeader className="p-0 sm:w-1/3">
                       <Image
                         src={service.image}
@@ -294,7 +294,7 @@ export default function Home() {
               data-ai-hint="modern factory"
             />
           <div className="space-y-4 text-center md:text-left lg:text-right">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Advanced Infrastructure</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl fade-in-up">Our Advanced Infrastructure</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
               We invest in the latest technology and state-of-the-art facilities. Explore our automated sorting centers, secure data destruction labs, and specialized plastics recycling plants that power our operations.
             </p>
@@ -308,7 +308,7 @@ export default function Home() {
        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl fade-in-up">Get in Touch</h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
               We're here to help and answer any question you might have. We look forward to hearing from you.
             </p>

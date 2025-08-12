@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
+                <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none fade-in-up">
                   About Pure Planet Recycling
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-3">
-            <Card>
+            <Card className="card-lift">
               <CardHeader className="flex flex-row items-center gap-4">
                 <Target className="h-8 w-8 text-primary" />
                 <CardTitle className="font-headline">Our Mission</CardTitle>
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 <p className="text-muted-foreground">To provide innovative and environmentally responsible solutions for managing electronic and plastic waste, contributing to a sustainable circular economy and a healthier planet for future generations.</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="card-lift">
               <CardHeader className="flex flex-row items-center gap-4">
                 <Eye className="h-8 w-8 text-primary" />
                 <CardTitle className="font-headline">Our Vision</CardTitle>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <p className="text-muted-foreground">To be a global leader in the e-waste management industry, setting new standards for sustainability, efficiency, and data security, and inspiring a worldwide movement towards responsible consumption and disposal.</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="card-lift">
               <CardHeader className="flex flex-row items-center gap-4">
                 <Leaf className="h-8 w-8 text-primary" />
                 <CardTitle className="font-headline">Our Values</CardTitle>
@@ -83,7 +83,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                     <Users className="mx-auto h-12 w-12 text-primary"/>
-                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Meet Our Team</h2>
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl fade-in-up">Meet Our Team</h2>
                     <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         The passionate individuals driving our mission forward.
                     </p>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             </div>
             <div className="mx-auto grid grid-cols-2 gap-8 py-12 sm:grid-cols-2 md:grid-cols-4">
                 {teamMembers.map((member) => (
-                    <div key={member.name} className="flex flex-col items-center space-y-2">
+                    <div key={member.name} className="flex flex-col items-center space-y-2 card-lift">
                         <Avatar className="h-24 w-24">
                             <AvatarImage src={`https://placehold.co/100x100.png?text=${member.avatar}`} />
                             <AvatarFallback>{member.avatar}</AvatarFallback>

@@ -62,7 +62,7 @@ export default function BlogPage() {
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl fade-in-up">
               Pure Planet Recycling Insights
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -71,7 +71,7 @@ export default function BlogPage() {
           </div>
           <div className="grid gap-8 pt-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <Card key={post.slug} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+              <Card key={post.slug} className="flex flex-col overflow-hidden card-lift">
                 <CardHeader className="p-0">
                   <Image
                     src={post.image}

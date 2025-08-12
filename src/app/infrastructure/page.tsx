@@ -39,7 +39,7 @@ export default function InfrastructurePage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/10">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl fade-in-up">
               Our State-of-the-Art Infrastructure
             </h1>
             <p className="max-w-[900px] text-muted-foreground md:text-xl">
@@ -66,7 +66,7 @@ export default function InfrastructurePage() {
               <div className={index % 2 === 0 ? 'md:order-2' : 'md:order-1'}>
                 <div className="space-y-4">
                   <div className="inline-block">{facility.icon}</div>
-                  <h3 className="font-headline text-2xl font-bold">{facility.title}</h3>
+                  <h3 className="font-headline text-2xl font-bold fade-in-up">{facility.title}</h3>
                   <p className="text-muted-foreground text-lg">{facility.description}</p>
                 </div>
               </div>

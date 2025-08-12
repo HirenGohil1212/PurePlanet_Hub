@@ -94,7 +94,7 @@ export default function CareersPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
+                <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none fade-in-up">
                   Join Our Mission
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -117,14 +117,14 @@ export default function CareersPage() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Why Work at Pure Planet Recycling?</h2>
+                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl fade-in-up">Why Work at Pure Planet Recycling?</h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-lg">
                     We're more than just a company; we're a community dedicated to making a positive impact.
                 </p>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-1 md:grid-cols-3">
                 {benefits.map((benefit, index) => (
-                    <Card key={index}>
+                    <Card key={index} className="card-lift">
                         <CardHeader className="flex flex-col items-center text-center">
                             {benefit.icon}
                             <CardTitle className="mt-4 font-headline">{benefit.title}</CardTitle>
@@ -142,7 +142,7 @@ export default function CareersPage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <Briefcase className="h-12 w-12 text-primary" />
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl fade-in-up">
               Current Openings
             </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-lg">
@@ -180,7 +180,7 @@ export default function CareersPage() {
                         <span className="font-semibold text-foreground">Job Description: </span>
                         {job.jd}
                       </div>
-                      <div>
+                       <div>
                         <span className="font-semibold text-foreground">Education: </span>
                         {job.education}
                       </div>

@@ -26,7 +26,7 @@ export default function ContactPage() {
       <section className="w-full py-12 md:py-24 bg-primary/10">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl fade-in-up">
               Get in Touch
             </h1>
             <p className="max-w-[900px] text-muted-foreground md:text-xl">
@@ -40,7 +40,7 @@ export default function ContactPage() {
         <div className="container grid gap-12 px-4 md:px-6 lg:grid-cols-2">
           <div className="space-y-8">
              <div className="space-y-2">
-                <h2 className="text-2xl font-bold font-headline">Contact Information</h2>
+                <h2 className="text-2xl font-bold font-headline fade-in-up">Contact Information</h2>
                 <p className="text-muted-foreground">Find us at our office or drop us a line via email or phone.</p>
             </div>
             <div className="space-y-4">
@@ -73,7 +73,7 @@ export default function ContactPage() {
               </Card>
             </div>
             <div className="space-y-2">
-                <h2 className="text-2xl font-bold font-headline">Follow Us</h2>
+                <h2 className="text-2xl font-bold font-headline fade-in-up">Follow Us</h2>
                  <div className="flex space-x-4">
                     <Button variant="ghost" size="icon" asChild>
                     <Link href="#">
@@ -104,7 +104,7 @@ export default function ContactPage() {
           </div>
           <div className="space-y-8">
             <div className="space-y-2">
-                <h2 className="text-2xl font-bold font-headline">Send Us a Message</h2>
+                <h2 className="text-2xl font-bold font-headline fade-in-up">Send Us a Message</h2>
                 <p className="text-muted-foreground">Have a specific question? Fill out the form below.</p>
             </div>
             <Card>

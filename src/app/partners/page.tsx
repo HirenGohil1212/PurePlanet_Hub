@@ -18,7 +18,7 @@ export default function PartnersPage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <Handshake className="h-12 w-12 text-primary" />
-            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl fade-in-up">
               Our Valued Partners
             </h1>
             <p className="max-w-[900px] text-muted-foreground md:text-xl">
@@ -32,7 +32,7 @@ export default function PartnersPage() {
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {partners.map((partner) => (
-              <Card key={partner.name} className="flex flex-col items-center text-center transition-shadow duration-300 hover:shadow-xl">
+              <Card key={partner.name} className="flex flex-col items-center text-center card-lift">
                 <CardHeader className="p-6">
                   <Image
                     src={partner.logo}
