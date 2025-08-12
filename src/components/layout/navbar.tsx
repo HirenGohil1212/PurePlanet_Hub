@@ -23,8 +23,6 @@ const navLinks = [
     label: "EPR Services",
     subLinks: [
       { href: "/services/e-waste-recycling", label: "E-waste Recycling" },
-      { href: "/services/data-destruction", label: "Data Destruction" },
-      { href: "/services/plastic-waste-management", label: "Plastic Waste Management" },
       { href: "/services/environmental-awareness-campaigns", label: "Awareness Campaigns" },
       { href: "/services/compliance-management", label: "Compliance Management" },
       { href: "/services/reverse-logistics", label: "Reverse Logistics" },
