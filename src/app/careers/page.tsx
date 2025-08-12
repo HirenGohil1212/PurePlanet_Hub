@@ -13,7 +13,7 @@ const jobOpenings = [
   {
     id: "logistics-manager",
     title: "Logistics Manager",
-    location: "New York, NY",
+    location: "Tarapur, Gujarat",
     department: "Operations",
     experience: "4 to 5 Yrs. in logistics and supply chain management.",
     package: "Competitive, based on experience.",
@@ -24,7 +24,7 @@ const jobOpenings = [
   {
     id: "data-security-specialist",
     title: "Data Security Specialist",
-    location: "San Francisco, CA",
+    location: "Tarapur, Gujarat",
     department: "IT & Security",
     experience: "2 to 3 Yrs. in IT security and data management.",
     package: "Competitive, based on experience.",
@@ -35,7 +35,7 @@ const jobOpenings = [
   {
     id: "environmental-educator",
     title: "Environmental Educator",
-    location: "Remote",
+    location: "Tarapur, Gujarat",
     department: "Community Outreach",
     experience: "1 to 2 Yrs. in environmental science or education.",
     package: "Competitive, based on experience.",
@@ -46,7 +46,7 @@ const jobOpenings = [
     {
     id: "recycling-technician",
     title: "Recycling Technician",
-    location: "Chicago, IL",
+    location: "Tarapur, Gujarat",
     department: "Plant Operations",
     experience: "0 to 1 Yr. in a plant or factory environment.",
     package: "Competitive, based on experience.",
