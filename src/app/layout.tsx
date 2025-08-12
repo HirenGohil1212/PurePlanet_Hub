@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
+import { Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +32,14 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+        </div>
+        <div className="fixed bottom-4 right-4 z-50 md:hidden">
+          <Button asChild size="lg" className="rounded-full shadow-lg">
+            <Link href="tel:9210783697">
+              <Phone className="mr-2 h-6 w-6" />
+              Call Us
+            </Link>
+          </Button>
         </div>
         <Toaster />
       </body>
