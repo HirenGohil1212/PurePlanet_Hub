@@ -45,7 +45,7 @@ export default function ServicesPage() {
     <div className="fade-in">
       <section className="w-full py-12 md:py-24 bg-primary/10">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                  <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
@@ -76,10 +76,10 @@ export default function ServicesPage() {
               We offer a full suite of services to manage your e-waste and plastic waste responsibly, ensuring compliance and promoting sustainability.
             </p>
           </div>
-          <div className="grid gap-8 pt-12 lg:grid-cols-2">
+          <div className="grid gap-8 pt-12 md:grid-cols-2">
             {services.map((service) => (
-              <Card key={service.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl md:flex-row">
-                <CardHeader className="p-0 md:w-1/3">
+              <Card key={service.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl sm:flex-row">
+                <CardHeader className="p-0 sm:w-1/3">
                   <Image
                     src={service.image}
                     width={400}

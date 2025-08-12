@@ -1,5 +1,5 @@
 
-import { Twitter, Linkedin, Gitlab } from "lucide-react";
+import { Twitter, Linkedin, Gitlab, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -23,7 +23,7 @@ export function Footer() {
   return (
     <footer className="bg-secondary/50">
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col items-start space-y-4">
                  <Link href="/">
                     <Image src="/logo1.png?v=2" alt="Pure Planet Recycling Logo" width={256} height={64} className="h-16 w-auto" />
@@ -33,22 +33,28 @@ export function Footer() {
                 </p>
                 <div className="flex space-x-2">
                     <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Twitter className="h-5 w-5" />
-                        <span className="sr-only">Twitter</span>
-                    </Link>
+                      <Link href="#">
+                          <Facebook className="h-5 w-5" />
+                          <span className="sr-only">Facebook</span>
+                      </Link>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Linkedin className="h-5 w-5" />
-                        <span className="sr-only">LinkedIn</span>
-                    </Link>
+                      <Link href="#">
+                          <Linkedin className="h-5 w-5" />
+                          <span className="sr-only">LinkedIn</span>
+                      </Link>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Gitlab className="h-5 w-5" />
-                        <span className="sr-only">Gitlab</span>
-                    </Link>
+                      <Link href="#">
+                          <Twitter className="h-5 w-5" />
+                          <span className="sr-only">Twitter</span>
+                      </Link>
+                    </Button>
+                     <Button variant="ghost" size="icon" asChild>
+                      <Link href="#">
+                          <Instagram className="h-5 w-5" />
+                          <span className="sr-only">Instagram</span>
+                      </Link>
                     </Button>
                 </div>
             </div>

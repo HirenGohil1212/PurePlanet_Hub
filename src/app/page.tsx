@@ -221,7 +221,7 @@ export default function Home() {
 
       <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                  <h1 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
@@ -232,7 +232,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <Image
+             <Image
               src="https://placehold.co/600x400.png"
               width="600"
               height="400"
@@ -249,10 +249,10 @@ export default function Home() {
                   We offer a full suite of services to manage your e-waste and plastic waste responsibly, ensuring compliance and promoting sustainability.
                 </p>
               </div>
-              <div className="grid gap-8 pt-12 lg:grid-cols-2">
+              <div className="grid gap-8 pt-12 md:grid-cols-2">
                 {services.map((service) => (
-                  <Card key={service.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl md:flex-row">
-                    <CardHeader className="p-0 md:w-1/3">
+                  <Card key={service.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl sm:flex-row">
+                    <CardHeader className="p-0 sm:w-1/3">
                       <Image
                         src={service.image}
                         width={400}
@@ -284,16 +284,16 @@ export default function Home() {
       </section>
       
        <section className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
+        <div className="container grid items-center gap-6 px-4 md:px-6 md:grid-cols-2 lg:gap-12">
              <Image
               src="/image6.png"
               width="600"
               height="400"
               alt="Infrastructure"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover order-last lg:order-first"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover order-last md:order-first"
               data-ai-hint="modern factory"
             />
-          <div className="space-y-4 lg:text-right">
+          <div className="space-y-4 text-center md:text-left lg:text-right">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Advanced Infrastructure</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
               We invest in the latest technology and state-of-the-art facilities. Explore our automated sorting centers, secure data destruction labs, and specialized plastics recycling plants that power our operations.

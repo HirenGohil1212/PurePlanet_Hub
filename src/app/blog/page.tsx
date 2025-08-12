@@ -69,7 +69,7 @@ export default function BlogPage() {
               Stay updated with the latest news, articles, and insights on e-waste management and sustainability.
             </p>
           </div>
-          <div className="grid gap-8 pt-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+          <div className="grid gap-8 pt-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <Card key={post.slug} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
                 <CardHeader className="p-0">
