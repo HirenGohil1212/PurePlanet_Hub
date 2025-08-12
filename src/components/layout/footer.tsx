@@ -88,10 +88,10 @@ export function Footer() {
             <div>
                  <h3 className="font-headline font-semibold text-foreground">Contact Us</h3>
                  <ul className="mt-4 space-y-2 text-muted-foreground">
-                    <li>123 Sustainability Ave,</li>
-                    <li>Green City, PC 12345</li>
+                    <li className="max-w-xs">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</li>
                     <li className="pt-2"><strong>Email:</strong> contact@pureplanetrecycling.com</li>
-                    <li><strong>Phone:</strong> (123) 456-7890</li>
+                    <li><strong>Phone:</strong> 9210783697</li>
+                    <li><strong>Phone:</strong> 9099560017</li>
                  </ul>
             </div>
         </div>

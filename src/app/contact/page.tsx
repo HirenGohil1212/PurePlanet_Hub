@@ -19,7 +19,7 @@ export default function ContactPage() {
 
     const formattedMessage = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\n\nMessage:\n${message}`;
     const mailtoLink = `mailto:contact@pureplanetrecycling.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedMessage)}`;
-    const whatsappLink = `https://wa.me/11234567890?text=${encodeURIComponent(formattedMessage)}`;
+    const whatsappLink = `https://wa.me/919210783697?text=${encodeURIComponent(formattedMessage)}`;
 
   return (
     <div className="fade-in">
@@ -50,7 +50,7 @@ export default function ContactPage() {
                   <CardTitle>Our Office</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">123 Sustainability Ave,<br/>Green City, PC 12345</p>
+                  <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
                 </CardContent>
               </Card>
                <Card>
@@ -67,8 +67,9 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary" />
                   <CardTitle>Call Us</CardTitle>
                 </CardHeader>
-                <CardContent>
-                   <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">(123) 456-7890</a>
+                <CardContent className="flex flex-col space-y-1">
+                   <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
+                   <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
                 </CardContent>
               </Card>
             </div>

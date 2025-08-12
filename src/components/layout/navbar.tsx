@@ -101,8 +101,8 @@ export function Navbar() {
             <div className="hidden lg:flex items-center gap-2 rounded-md border-l border-primary/50 pl-4 ml-2">
                 <Phone className="h-5 w-5 text-primary"/>
                 <div className="flex flex-col text-sm">
-                    <a href="tel:+1234567890" className="font-semibold text-primary hover:underline whitespace-nowrap">(123) 456-7890</a>
-                    <a href="tel:+11234567891" className="font-semibold text-primary hover:underline whitespace-nowrap">(123) 456-7891</a>
+                    <a href="tel:9210783697" className="font-semibold text-primary hover:underline whitespace-nowrap">9210783697</a>
+                    <a href="tel:9099560017" className="font-semibold text-primary hover:underline whitespace-nowrap">9099560017</a>
                 </div>
             </div>
         </nav>
@@ -147,8 +147,8 @@ export function Navbar() {
                  <div className="mt-6 flex items-center gap-2 rounded-md border border-primary/50 bg-primary/10 p-2">
                     <Phone className="h-5 w-5 text-primary"/>
                     <div className="flex flex-col text-sm">
-                        <a href="tel:+1234567890" className="font-semibold text-primary hover:underline">(123) 456-7890</a>
-                        <a href="tel:+11234567891" className="font-semibold text-primary hover:underline">(123) 456-7891</a>
+                        <a href="tel:9210783697" className="font-semibold text-primary hover:underline">9210783697</a>
+                        <a href="tel:9099560017" className="font-semibold text-primary hover:underline">9099560017</a>
                     </div>
                 </div>
               </div>
