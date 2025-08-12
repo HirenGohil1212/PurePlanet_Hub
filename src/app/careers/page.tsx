@@ -7,7 +7,7 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Briefcase, Heart, TreePine, Users, Mail } from "lucide-react";
+import { Briefcase, Heart, TreePine, Users, Mail, MapPin, Phone } from "lucide-react";
 
 const jobOpenings = [
   {
@@ -206,6 +206,36 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl fade-in-up">Our Location</h2>
+            </div>
+            <div className="mx-auto grid max-w-2xl gap-8 py-12 sm:grid-cols-1">
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <CardTitle>Our Office</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
+                </CardContent>
+              </Card>
+               <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Phone className="h-6 w-6 text-primary" />
+                  <CardTitle>Contact for Careers</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col space-y-1">
+                   <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
+                   <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
+                </CardContent>
+              </Card>
+            </div>
+        </div>
+      </section>
     </div>
   );
-}
+
+    
