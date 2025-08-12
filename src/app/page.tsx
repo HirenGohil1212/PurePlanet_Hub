@@ -125,27 +125,6 @@ export default function Home() {
     const mailtoLink = `mailto:contact@pureplanetrecycling.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedMessage)}`;
     const whatsappLink = `https://wa.me/11234567890?text=${encodeURIComponent(formattedMessage)}`;
     
-    useEffect(() => {
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-on-scroll');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        return () => {
-            sections.forEach(section => {
-                observer.unobserve(section);
-            });
-        };
-    }, []);
-
   return (
     <div className="fade-in">
       <section className="w-full">

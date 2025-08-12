@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
+import ScrollObserver from "@/components/layout/scroll-observer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,7 +26,9 @@ export default function RootLayout({
       <body className="font-body bg-background text-foreground antialiased">
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow">
+            <ScrollObserver>{children}</ScrollObserver>
+          </main>
           <Footer />
         </div>
         <Toaster />
