@@ -28,7 +28,8 @@ const servicesData = {
         "State-of-the-art technology for maximum resource recovery.",
         "Strict adherence to all environmental and safety regulations.",
         "Transparent and traceable process with complete documentation.",
-        "Customized solutions for both individual and corporate clients."
+        "Customized solutions for both individual and corporate clients.",
+        "Secure handling of all materials from pickup to disposal."
       ]
     }
   },
@@ -55,7 +56,8 @@ const servicesData = {
         "100% secure and irreversible data destruction methods.",
         "Compliance with international standards like GDPR, HIPAA, and more.",
         "Certified processes with a full audit trail.",
-        "Peace of mind knowing your sensitive information is safe."
+        "Peace of mind knowing your sensitive information is safe.",
+        "Environmentally responsible disposal of shredded media."
       ]
     }
   },
@@ -82,7 +84,8 @@ const servicesData = {
         "Comprehensive solutions for all types of plastic waste.",
         "Contribution to a circular economy by turning waste into resources.",
         "Advanced technology for efficient and eco-friendly processing.",
-        "Expertise in navigating plastic waste management regulations."
+        "Expertise in navigating plastic waste management regulations.",
+        "Transparent reporting on waste processing and recovery rates."
       ]
     }
   },
@@ -109,7 +112,8 @@ const servicesData = {
         "Engaging and impactful educational programs.",
         "Experienced educators with a passion for sustainability.",
         "Proven track record of successful community and corporate events.",
-        "Empowering the next generation of environmental stewards."
+        "Empowering the next generation of environmental stewards.",
+        "Content tailored to specific audiences and objectives."
       ]
     }
 
@@ -137,7 +141,8 @@ const servicesData = {
         "In-depth knowledge of local and international regulations.",
         "Proactive approach to ensure you're always ahead of changes.",
         "Reduced risk of fines and legal complications.",
-        "Enhanced corporate reputation as an environmentally responsible organization."
+        "Enhanced corporate reputation as an environmentally responsible organization.",
+        "Streamlined documentation and reporting processes."
       ]
     }
   },
@@ -164,7 +169,8 @@ const servicesData = {
         "Reliable and secure nationwide collection and transport.",
         "Real-time tracking for full transparency.",
         "Cost-effective and environmentally friendly logistics solutions.",
-        "Seamless integration with your existing operations."
+        "Seamless integration with your existing operations.",
+        "Professional team trained for handling all types of waste."
       ]
     }
   },
@@ -262,4 +268,3 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
-
