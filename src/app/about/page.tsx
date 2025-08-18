@@ -21,7 +21,7 @@ export default function AboutPage() {
                   About Pure Planet Recycling
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Pioneering sustainable solutions for a cleaner planet. We are committed to responsible e-waste management and environmental stewardship.
+                  Sustainable solutions for a cleaner planet. We are committed to responsible e-waste management and environmental stewardship.
                 </p>
               </div>
             </div>
