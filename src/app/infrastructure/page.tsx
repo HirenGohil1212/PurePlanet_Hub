@@ -18,13 +18,6 @@ const facilities = [
     icon: <Warehouse className="h-8 w-8 text-primary" />
   },
   {
-    title: "Plastics Recycling Plant",
-    description: "Equipped with modern machinery for shredding, washing, and pelletizing various types of plastic waste for re-entry into the manufacturing cycle.",
-    image: "https://placehold.co/600x400.png",
-    hint: "plastic recycling machine",
-    icon: <Truck className="h-8 w-8 text-primary" />
-  },
-  {
     title: "Research & Development Lab",
     description: "Our in-house R&D lab focuses on developing new, more efficient recycling techniques and finding innovative uses for recovered materials.",
     image: "https://placehold.co/600x400.png",
