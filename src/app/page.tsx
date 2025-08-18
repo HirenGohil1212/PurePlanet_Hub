@@ -106,8 +106,8 @@ const aboutItems = [
 ];
 
 const teamMembers = [
-  { name: "Alex Johnson", role: "CEO & Founder", avatar: "AJ" },
-  { name: "Maria Garcia", role: "Head of Operations", avatar: "MG" },
+  { name: "Alex Johnson", role: "Founder", avatar: "/Founder1.png", fallback: "AJ" },
+  { name: "Maria Garcia", role: "Founder", avatar: "/Founder2.png", fallback: "MG" },
 ];
 
 export default function Home() {
@@ -199,9 +199,9 @@ export default function Home() {
              <div className="mx-auto grid max-w-md grid-cols-2 gap-8 py-12">
                 {teamMembers.map((member) => (
                     <div key={member.name} className="flex flex-col items-center space-y-2 card-lift">
-                        <Avatar className="h-24 w-24">
-                            <AvatarImage src={`https://placehold.co/100x100.png?text=${member.avatar}`} />
-                            <AvatarFallback>{member.avatar}</AvatarFallback>
+                        <Avatar className="h-32 w-32">
+                            <AvatarImage src={member.avatar} />
+                            <AvatarFallback>{member.fallback}</AvatarFallback>
                         </Avatar>
                         <div className="text-center">
                             <p className="font-semibold">{member.name}</p>
