@@ -55,6 +55,15 @@ export default function ContactPage() {
               </Card>
                <Card>
                 <CardHeader className="flex flex-row items-center gap-4">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <CardTitle>Ahmedabad Office</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</p>
+                </CardContent>
+              </Card>
+               <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
                   <Mail className="h-6 w-6 text-primary" />
                   <CardTitle>Email Us</CardTitle>
                 </CardHeader>
