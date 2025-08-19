@@ -332,25 +332,27 @@ export default function Home() {
                   <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
                 </CardContent>
               </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <Mail className="h-6 w-6 text-primary" />
-                  <CardTitle>Email Us</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col h-full justify-center">
-                  <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary">contact@pureplanetrecycling.com</a>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <Phone className="h-6 w-6 text-primary" />
-                  <CardTitle>Call Us</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col space-y-1">
-                  <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
-                  <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
-                </CardContent>
-              </Card>
+              <div className="grid sm:grid-cols-2 gap-8">
+                <Card>
+                    <CardHeader className="flex flex-row items-center gap-4">
+                        <Mail className="h-6 w-6 text-primary" />
+                        <CardTitle>Email Us</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col h-full justify-center">
+                        <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary break-all">contact@pureplanetrecycling.com</a>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader className="flex flex-row items-center gap-4">
+                        <Phone className="h-6 w-6 text-primary" />
+                        <CardTitle>Call Us</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col space-y-1">
+                        <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
+                        <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
+                    </CardContent>
+                </Card>
+              </div>
             </div>
             <div className="space-y-8">
               <Card className="flex flex-col">
@@ -380,7 +382,7 @@ export default function Home() {
                   </form>
                 </CardContent>
               </Card>
-              <Card>
+               <Card>
                 <CardHeader>
                     <CardTitle className="font-headline text-2xl fade-in-up">Follow Us</CardTitle>
                 </CardHeader>
