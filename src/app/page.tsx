@@ -314,93 +314,97 @@ export default function Home() {
           </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <CardTitle>Our Office</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <Mail className="h-6 w-6 text-primary" />
-                    <CardTitle>Email Us</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary">contact@pureplanetrecycling.com</a>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <Phone className="h-6 w-6 text-primary" />
-                    <CardTitle>Call Us</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-col space-y-1">
-                    <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
-                    <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold font-headline">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                      <Facebook className="h-6 w-6 text-primary" />
-                      <span className="sr-only">Facebook</span>
-                    </Link>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                      <Linkedin className="h-6 w-6 text-primary" />
-                      <span className="sr-only">LinkedIn</span>
-                    </Link>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                      <Twitter className="h-6 w-6 text-primary" />
-                      <span className="sr-only">Twitter</span>
-                    </Link>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                      <Instagram className="h-6 w-6 text-primary" />
-                      <span className="sr-only">Instagram</span>
-                    </Link>
-                  </Button>
-                </div>
-              </div>
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <CardTitle>Our Office</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Mail className="h-6 w-6 text-primary" />
+                  <CardTitle>Email Us</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col h-full justify-center">
+                  <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary">contact@pureplanetrecycling.com</a>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Phone className="h-6 w-6 text-primary" />
+                  <CardTitle>Call Us</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col space-y-1">
+                  <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
+                  <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
+                </CardContent>
+              </Card>
             </div>
-            <Card className="flex flex-col">
-              <CardContent className="p-6">
-                <form className="space-y-4 flex flex-col flex-grow" onSubmit={(e) => e.preventDefault()}>
-                  <div className="space-y-4 flex-grow">
-                    <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
-                    <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <Input type="tel" placeholder="Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
-                    <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                    <Textarea placeholder="Your Message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-2 mt-4">
-                    <Button asChild className="w-full">
-                      <Link href={whatsappLink} target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                        Send on WhatsApp
-                      </Link>
-                    </Button>
-                    <Button asChild variant="secondary" className="w-full">
-                      <Link href={mailtoLink}>
-                        <Mail className="mr-2 h-5 w-5" />
-                        Send on Email
-                      </Link>
-                    </Button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="space-y-8">
+              <Card className="flex flex-col">
+                <CardContent className="p-6">
+                  <form className="space-y-4 flex flex-col flex-grow" onSubmit={(e) => e.preventDefault()}>
+                    <div className="space-y-4 flex-grow">
+                      <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                      <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                      <Input type="tel" placeholder="Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+                      <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                      <Textarea placeholder="Your Message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-2 mt-4">
+                      <Button asChild className="w-full">
+                        <Link href={whatsappLink} target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                          Send on WhatsApp
+                        </Link>
+                      </Button>
+                      <Button asChild variant="secondary" className="w-full">
+                        <Link href={mailtoLink}>
+                          <Mail className="mr-2 h-5 w-5" />
+                          Send on Email
+                        </Link>
+                      </Button>
+                    </div>
+                  </form>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                    <CardTitle className="font-headline text-2xl fade-in-up">Follow Us</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="flex space-x-4">
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Facebook className="h-6 w-6 text-primary" />
+                            <span className="sr-only">Facebook</span>
+                        </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Linkedin className="h-6 w-6 text-primary" />
+                            <span className="sr-only">LinkedIn</span>
+                        </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Twitter className="h-6 w-6 text-primary" />
+                            <span className="sr-only">Twitter</span>
+                        </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Instagram className="h-6 w-6 text-primary" />
+                            <span className="sr-only">Instagram</span>
+                        </Link>
+                        </Button>
+                    </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
