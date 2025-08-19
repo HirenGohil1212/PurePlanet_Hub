@@ -325,6 +325,15 @@ export default function Home() {
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center gap-4">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <CardTitle>Plant Address</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
                   <Mail className="h-6 w-6 text-primary" />
                   <CardTitle>Email Us</CardTitle>
                 </CardHeader>
