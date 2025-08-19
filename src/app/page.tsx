@@ -106,8 +106,8 @@ const aboutItems = [
 ];
 
 const teamMembers = [
-  { name: "Bilal Khan", role: "Founder", avatar: "/Founder1.png", fallback: "BK" },
   { name: "Danish Malik", role: "Founder", avatar: "/Founder2.png", fallback: "DM" },
+  { name: "Bilal Khan", role: "Founder", avatar: "/Founder1.png", fallback: "BK" },
 ];
 
 export default function Home() {
@@ -314,51 +314,50 @@ export default function Home() {
           </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <CardTitle>Our Office</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <CardTitle>Plant Address</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
+                </CardContent>
+              </Card>
+              <Card>
                   <CardHeader className="flex flex-row items-center gap-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <CardTitle>Our Office</CardTitle>
+                      <Mail className="h-6 w-6 text-primary" />
+                      <CardTitle>Email Us</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</p>
+                      <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary break-all">contact@pureplanetrecycling.com</a>
                   </CardContent>
-                </Card>
-                <Card>
+              </Card>
+              <Card>
                   <CardHeader className="flex flex-row items-center gap-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <CardTitle>Plant Address</CardTitle>
+                      <Phone className="h-6 w-6 text-primary" />
+                      <CardTitle>Call Us</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
+                  <CardContent className="flex flex-col space-y-1">
+                      <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
+                      <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
                   </CardContent>
-                </Card>
-                <div className="grid sm:grid-cols-2 gap-8">
-                  <Card>
-                      <CardHeader className="flex flex-row items-center gap-4">
-                          <Mail className="h-6 w-6 text-primary" />
-                          <CardTitle>Email Us</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <a href="mailto:contact@pureplanetrecycling.com" className="text-muted-foreground hover:text-primary break-all">contact@pureplanetrecycling.com</a>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader className="flex flex-row items-center gap-4">
-                          <Phone className="h-6 w-6 text-primary" />
-                          <CardTitle>Call Us</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex flex-col space-y-1">
-                          <a href="tel:9210783697" className="text-muted-foreground hover:text-primary">9210783697</a>
-                          <a href="tel:9099560017" className="text-muted-foreground hover:text-primary">9099560017</a>
-                      </CardContent>
-                  </Card>
-                </div>
-              </div>
+              </Card>
             </div>
             <div className="space-y-8">
               <Card>
-                <CardContent className="p-6">
+                <CardHeader>
+                    <CardTitle className="font-headline text-2xl fade-in-up">Send Us a Message</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0">
                   <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                     <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
                     <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
