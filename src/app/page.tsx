@@ -106,8 +106,8 @@ const aboutItems = [
 ];
 
 const teamMembers = [
-  { name: "Danish Malik", role: "Founder", avatar: "/Founder2.png", fallback: "DM" },
   { name: "Bilal Khan", role: "Founder", avatar: "/Founder1.png", fallback: "BK" },
+  { name: "Danish Malik", role: "Founder", avatar: "/Founder2.png", fallback: "DM" },
 ];
 
 export default function Home() {
@@ -321,7 +321,7 @@ export default function Home() {
                     <CardTitle>Our Office</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</p>
+                    <p className="text-muted-foreground">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</p>
                   </CardContent>
                 </Card>
                 <Card>
