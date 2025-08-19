@@ -82,35 +82,6 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </div>
-            <div className="space-y-2">
-                <h2 className="text-2xl font-bold font-headline fade-in-up">Follow Us</h2>
-                 <div className="flex space-x-4">
-                    <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Facebook className="h-6 w-6 text-primary" />
-                        <span className="sr-only">Facebook</span>
-                    </Link>
-                    </Button>
-                    <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Linkedin className="h-6 w-6 text-primary" />
-                        <span className="sr-only">LinkedIn</span>
-                    </Link>
-                    </Button>
-                    <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Twitter className="h-6 w-6 text-primary" />
-                        <span className="sr-only">Twitter</span>
-                    </Link>
-                    </Button>
-                     <Button variant="ghost" size="icon" asChild>
-                    <Link href="#">
-                        <Instagram className="h-6 w-6 text-primary" />
-                        <span className="sr-only">Instagram</span>
-                    </Link>
-                    </Button>
-                </div>
-            </div>
           </div>
           <div className="space-y-8">
             <div className="space-y-2">
@@ -140,6 +111,39 @@ export default function ContactPage() {
                             </Button>
                         </div>
                     </form>
+                </CardContent>
+            </Card>
+            <Card>
+                <CardHeader>
+                    <CardTitle className="font-headline text-2xl fade-in-up">Follow Us</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="flex space-x-4">
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Facebook className="h-6 w-6 text-primary" />
+                            <span className="sr-only">Facebook</span>
+                        </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Linkedin className="h-6 w-6 text-primary" />
+                            <span className="sr-only">LinkedIn</span>
+                        </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Twitter className="h-6 w-6 text-primary" />
+                            <span className="sr-only">Twitter</span>
+                        </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                        <Link href="#">
+                            <Instagram className="h-6 w-6 text-primary" />
+                            <span className="sr-only">Instagram</span>
+                        </Link>
+                        </Button>
+                    </div>
                 </CardContent>
             </Card>
           </div>
