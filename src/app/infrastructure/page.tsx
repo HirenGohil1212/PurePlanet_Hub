@@ -6,7 +6,7 @@ const facilities = [
   {
     title: "Automated Sorting Facility",
     description: "Our main processing plant features advanced automated sorting technology to efficiently separate different types of e-waste, maximizing resource recovery.",
-    image: "https://placehold.co/600x400.png",
+    image: "/image9.png",
     hint: "factory conveyor belt",
     icon: <Factory className="h-8 w-8 text-primary" />
   },
