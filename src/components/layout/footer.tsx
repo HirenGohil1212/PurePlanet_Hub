@@ -88,7 +88,7 @@ export function Footer() {
             <div>
                  <h3 className="font-headline font-semibold text-foreground">Contact Us</h3>
                  <ul className="mt-4 space-y-2 text-muted-foreground">
-                    <li className="max-w-xs">PURE PLANET RECYCLING 75,83,84 Samrock Ceramic at kanavada taluka, Tarapur, Kheda, Gujarat 388180</li>
+                    <li className="max-w-xs">Shop No. B - 341, Sumel Business Park - 4, New Gujarat Synthetic Mill Co, Amdupura, Naroda Road, Saraspur, Ahmedabad - 380018</li>
                     <li className="pt-2"><strong>Email:</strong> contact@pureplanetrecycling.com</li>
                     <li><strong>Phone:</strong> 9210783697</li>
                     <li><strong>Phone:</strong> 9099560017</li>
