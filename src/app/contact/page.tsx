@@ -37,7 +37,7 @@ export default function ContactPage() {
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid gap-12 px-4 md:px-6 lg:grid-cols-2">
+        <div className="container grid gap-12 px-4 md:px-6 lg:grid-cols-2 lg:items-start">
           <div className="space-y-8">
              <div className="space-y-2">
                 <h2 className="text-2xl font-bold font-headline fade-in-up">Contact Information</h2>
