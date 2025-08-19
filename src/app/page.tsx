@@ -106,8 +106,8 @@ const aboutItems = [
 ];
 
 const teamMembers = [
-  { name: "Danish Malik", role: "Founder", avatar: "/Founder2.png", fallback: "DM" },
   { name: "Bilal Khan", role: "Founder", avatar: "/Founder1.png", fallback: "BK" },
+  { name: "Danish Malik", role: "Founder", avatar: "/Founder2.png", fallback: "DM" },
 ];
 
 export default function Home() {
@@ -312,7 +312,7 @@ export default function Home() {
               We're here to help and answer any question you might have. We look forward to hearing from you.
             </p>
           </div>
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
               <div className="space-y-4">
                 <Card>
@@ -374,15 +374,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Card>
-              <CardContent className="p-6">
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                  <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
-                  <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                  <Input type="tel" placeholder="Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
-                  <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                  <Textarea placeholder="Your Message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
-                  <div className="flex flex-col sm:flex-row gap-2">
+            <Card className="flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <form className="space-y-4 flex flex-col flex-grow" onSubmit={(e) => e.preventDefault()}>
+                  <div className="space-y-4 flex-grow">
+                    <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                    <Input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <Input type="tel" placeholder="Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+                    <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                    <Textarea placeholder="Your Message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-2 mt-auto">
                     <Button asChild className="w-full">
                       <Link href={whatsappLink} target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
