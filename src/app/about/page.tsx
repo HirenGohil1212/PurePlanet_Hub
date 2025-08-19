@@ -5,8 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Leaf, Target, Eye, Users } from "lucide-react";
 
 const teamMembers = [
-  { name: "Bilal Khan", role: "Founder", avatar: "/Founder1.png", fallback: "BK" },
   { name: "Danish Malik", role: "Founder", avatar: "/Founder2.png", fallback: "DM" },
+  { name: "Bilal Khan", role: "Founder", avatar: "/Founder1.png", fallback: "BK" },
 ];
 
 export default function AboutPage() {
